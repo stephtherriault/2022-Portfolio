@@ -1,0 +1,257 @@
+a{
+  color: #0036B1;
+}
+h2{
+  text-decoration: underline;
+  text-decoration-color: #FECA06;
+  text-decoration-thickness: 3px;
+  text-decoration: underline #FECA06 solid 3px;
+  text-decoration-skip-ink: none;
+}
+.Light-Text h2{
+  text-decoration: none;
+}
+.Haven-Header{
+  align-items: center;
+  height: 75vh;
+  gap: 0;
+}
+.Haven-Header-BG-Stack{
+  border: 6px solid #31180A;
+  border-radius: 0px 0px 16px 16px;
+  margin-top: calc( 75vh + ( -1 * ( ( ((100% - 12px) * 1.78) + ((100% - 12px) * 1.78 * 0.65) ) + 12px) )  );
+  /* the math on this one was fucking tricky, if you're trying to fix this in the future and you're mad I haven't explained this bs, then I'm truly sorry. If you're trying to make this responsive and the image is sliding too far down or up, try changing increasing/decreasing the column width of the parent column */
+}
+.Haven-Header-BG-Stack img:first-child{
+  position:relative;
+  border-radius: 0px 0px 10px 10px;
+  z-index: -1;
+}
+.Haven-Header-BG-Stack img:last-child{
+  position:relative;
+  border-radius: 10px;
+  margin-top: calc( -1 * (0.35 * (100% * 1.78)) );
+  z-index: 1;
+}
+.Haven-Header-Mockup-Stack{
+  position:relative;
+  gap:0px;
+  z-index:2;
+  height:0px;
+}
+.Haven-Header-Mockup-Stack .Mockup-Wrapper.Simple-In{
+  opacity:0%;
+  pointer-events: none;
+}
+.Haven-Header-Mockup-Stack .Mockup-Wrapper:first-child.Simple-In.Entered-Screen{
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: auto;
+  left:-40%;
+  right:0;
+  bottom:0;
+  width:80%;
+  opacity: 0%;
+  transform-origin: 50% 80%;
+  transform: rotate(0deg);
+  animation: Simple-Element-Enters-Fan-Left 0.8s cubic-bezier(0.84, 0.41, 0.24, 0.66);
+  animation-delay: 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 3;
+}
+.Haven-Header-Mockup-Stack .Mockup-Wrapper:nth-child(2){
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left:0;
+  right:0;
+  bottom:0;
+  width:90%;
+  z-index: 5;
+}
+.Haven-Header-Mockup-Stack .Mockup-Wrapper:last-child.Simple-In.Entered-Screen{
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: auto;
+  left:0;
+  right:-40%;
+  bottom:0;
+  width:80%;
+  opacity: 0%;
+  transform-origin: 50% 80%;
+  transform: rotate(0deg);
+  animation: Simple-Element-Enters-Fan-Right 0.8s cubic-bezier(0.84, 0.41, 0.24, 0.66);
+  animation-delay: 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index:4;
+}
+@-webkit-keyframes Simple-Element-Enters-Fan-Left{
+  0%{
+    opacity:0%;
+  }
+  100%{
+    opacity:100%;
+    -webkit-transform: translateY(0px);
+    -webkit-transform: rotate(-15deg);
+  }
+}
+@keyframes Simple-Element-Enters-Fan-Left{
+  0%{
+    opacity:0%;
+  }
+  100%{
+    opacity:100%;
+    transform: translateY(0px);
+    transform: rotate(-15deg);
+  }
+}
+@-webkit-keyframes Simple-Element-Enters-Fan-Right{
+  0%{
+    opacity:0%;
+  }
+  100%{
+    opacity:100%;
+    -webkit-transform: translateY(0px);
+    -webkit-transform: rotate(15deg);
+  }
+}
+@keyframes Simple-Element-Enters-Fan-Right{
+  0%{
+    opacity:0%;
+  }
+  100%{
+    opacity:100%;
+    transform: translateY(0px);
+    transform: rotate(15deg);
+  }
+}
+
+.Article-Title-Column{
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  width:100%;
+  gap:4px;
+}
+.Context-Summary{
+  align-items: center;
+}
+.Context-Summary ul,ol{
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 4px;
+}
+.Context-Summary h3{
+  width:100%;
+  color: #0036B1;
+  border-bottom: 1px solid #0036B1;
+}
+.Context-Summary .Bottom-To-Top-Column{
+  gap:16px;
+}
+
+.Left-To-Right-Grid Img{
+  width: calc(33% - 8px);
+  border-radius: 4px;
+}
+
+#Context{
+  padding-bottom: 20vh
+}
+
+#The-Problem{
+  padding: 15vh 0px;
+  background: rgb(60,136,222);
+  background: linear-gradient(180deg, rgba(60,136,222,1) 0%, rgba(18,126,247,1) 100%);
+    --Drop-Shadow-Color: rgba(255, 255, 255, 0.4);
+}
+
+#Persona{
+  padding-bottom: 10vh;
+  padding-top: 20vh;
+
+}
+
+#Journeymap{
+  padding: 15vh 0px;
+}
+
+#Current-Offerings{
+  padding: 15vh 0px;
+}
+
+#Process{
+  padding: 15vh 0px;
+}
+#Process .Left-To-Right-Grid{
+  margin-bottom: 10vh;
+}
+#Process .Left-To-Right-Row{
+  padding-top: 15vh;
+}
+
+#Iteration-My-Plan{
+  padding: 15vh 0px;
+  background: rgb(60,136,222);
+  background: linear-gradient(180deg, rgba(60,136,222,1) 0%, rgba(18,126,247,1) 100%);
+  --Drop-Shadow-Color: rgba(255, 255, 255, 0.4);
+  /*TO DO: Make gap not look like ass */
+}
+
+#Prototyping{
+  padding: 15vh 0px;
+}
+#Prototyping #Prototyping-Inverse-Shadow-Card{
+  --Drop-Shadow-Color: rgb(60,136,222, 0.7);
+}
+
+#Content-Engagement-Testing{
+  padding: 15vh 0px;
+  background: rgb(60,136,222);
+  background: linear-gradient(180deg, rgba(60,136,222,1) 0%, rgba(18,126,247,1) 100%);
+  --Drop-Shadow-Color: rgba(255, 255, 255, 0.4);
+  gap:20vh;
+}
+
+#Motion-Design{
+  padding: 15vh 0px;
+}
+
+#Final-Interface{
+  padding: 10vh 0px;
+  background: rgb(60,136,222);
+  background: linear-gradient(0deg, rgba(60,136,222,1) 0%, rgba(26,122,231,1) 11%, rgba(48,143,251,1) 15%, rgba(99,172,255,1) 53%, rgba(144,196,255,0) 100%);
+  Gap: 22vh;
+}
+
+#Reflective-Content{
+  padding: 15vh 0px;
+}
+
+#Plan-Growth{
+  padding: 15vh 0px;
+}
+#Plan-Growth figcaption{
+ text-align: center;
+}
+
+#Privacy{
+  padding: 10vh 0px;
+}
+
+#Next-Steps{
+  padding: 10vh 0px;
+}
+
+#Learning{
+  padding: 15vh 0px;
+}
+#Learning figcaption{
+ text-align: center;
+}
