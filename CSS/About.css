@@ -1,0 +1,59 @@
+h2{
+  text-decoration: underline;
+  text-decoration-color: #FECA06;
+  text-decoration-thickness: 3px;
+  text-decoration: underline #FECA06 solid 3px;
+  text-decoration-skip-ink: none;
+}
+
+.SVG-Icon{
+  opacity: 60%;
+  width: 50%;
+  margin: auto;
+  fill: #FECA06;
+}
+
+#About{
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 100vh;
+}
+#About :first-child{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#About a{
+  color: #0036B1;
+}
+
+#Values{
+  padding-top: 0px;
+  padding-bottom: 25vh;
+  padding-left: 88px;
+  padding-right: 88px;
+    --Drop-Shadow-Color: rgba(242, 174, 0, 0.4);
+}
+#Values .Preview-Card-Content{
+  gap:16px;
+}
+
+#Contact{
+  padding: 20vh 88px 30vh;
+  background-color: #F8E294;
+  --Drop-Shadow-Color: rgba(228, 64, 255, 0.4);
+  width: 100%;
+}
+#Contact .Button{
+  background: rgb(163,0,200);
+  background: linear-gradient(180deg, rgba(163,0,200,1) 0%, rgba(128,0,176,1) 6%, rgba(128,0,176,1) 95%, rgba(68,0,154,1) 100%);
+  border: none;
+}
+#Contact .Button:hover{
+  background: rgb(163,0,200);
+  background: linear-gradient(180deg, rgba(163,0,200,1) 0%, rgba(155,20,207,1) 6%, rgba(155,20,207,1) 90%, rgba(95,0,180,1) 100%);
+}
+#Contact .Button:active{
+  background: rgb(91,1,144);
+  background: linear-gradient(180deg, rgba(91,1,144,1) 0%, rgba(99,0,138,1) 10%, rgba(99,0,138,1) 95%, rgba(163,0,200,1) 100%);
+  outline: none;
+}
