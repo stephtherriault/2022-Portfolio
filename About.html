@@ -33,7 +33,7 @@
 
 <body>
   <nav>
-    <a href="Index.html">
+    <a href="index.html">
       <lottie-player id="Logo-Lottie" src="https://assets3.lottiefiles.com/packages/lf20_n2xzlbuu.json"></lottie-player>
       <script aria-hidden="true" src="JS/Lottie-Controller.js"> </script>
     </a>
@@ -131,11 +131,15 @@
           <!-- Removes Captcha -->
           <input type="hidden" name="_captcha" value="false">
 
+          <!-- The next page to go to after submitting -->
+          <!-- TODO: Create duplicate page without form and success text -->
+          <input type="hidden" name="_next" value="">
+
           <label for="Full-Name"> Name </label>
-          <input type="text" id="Full-Name" name="Name" placeholder="Your name">
+          <input type="text" id="Full-Name" name="Name" placeholder="Your name" required>
 
           <label for="Email"> Email </label>
-          <input type="text" id="Email" name="Email" placeholder="Example@email.com">
+          <input type="text" id="Email" name="Email" placeholder="Example@email.com" required>
 
           <label for="Body"> Message </label>
           <textarea id="Body" name="Message" placeholder="What would you like to say?"></textarea>
