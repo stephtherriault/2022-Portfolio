@@ -29,16 +29,25 @@ h2{
 #Values{
   padding-top: 0px;
   padding-bottom: 25vh;
-  padding-left: 88px;
-  padding-right: 88px;
+  padding-left: 44px;
+  padding-right: 44px;
     --Drop-Shadow-Color: rgba(242, 174, 0, 0.4);
+}
+#Values .Left-To-Right-Row{
+  align-items: flex-start;
+}
+#Values .Left-To-Right-Row .On-Screen-Target-For-Child-Cards{
+  width: min-content;
+}
+#Values .Left-To-Right-Row .Preview-Card-Large{
+  min-width: 240px;
 }
 #Values .Preview-Card-Content{
   gap:16px;
 }
 
 #Contact{
-  padding: 20vh 88px 30vh;
+  padding: 20vh 0px 30vh;
   background-color: #F8E294;
   --Drop-Shadow-Color: rgba(228, 64, 255, 0.4);
   width: 100%;
@@ -56,4 +65,87 @@ h2{
   background: rgb(91,1,144);
   background: linear-gradient(180deg, rgba(91,1,144,1) 0%, rgba(99,0,138,1) 10%, rgba(99,0,138,1) 95%, rgba(163,0,200,1) 100%);
   outline: none;
+}
+
+/* -------- #About responsivity -------- */
+@media screen and (min-width: 831px){
+  #About .Col-Dynamic{
+    width: 60%; /*Sets default width of container of about page text and image*/
+    min-width: 744px;  /*locks size at smallest width until next breakpoint*/
+  }
+}
+@media screen and (max-width: 830px){
+  #About .Col-Dynamic{
+    flex-direction: column; /*Reflows image and text to flow vertically for space*/
+    width: calc(744px / 2); /* 744px is smallest acceptable width, halved because it's a column now*/
+  }
+  #About .Col-50{
+    width:100% /* Sets child columns at full width because parent is a column now */
+  }
+}
+@media screen and (max-width: 480px){
+  #About .Col-Dynamic{
+    width: calc(100% - 44px); /* Container is wide as screen, but needs two 22px margins*/
+  }
+}
+@media screen and (max-width: 400px){
+  #About .Col-Dynamic .Col-50:nth-child(2){ /* Grabs about text column */
+    gap: 16px; /* reduces gap between text and row of links. Default is 32px */
+  }
+  #About .Col-Dynamic .Left-To-Right-Row{  /* Grabs left to right row of links */
+    flex-direction: column; /* Flows links vertically */
+    align-items: flex-start; /* Left-algns links. Default is center */
+    gap: 2px; /* lessens gap. Default is 32px */
+  }
+}
+
+/* -------- #Values responsivity -------- */
+@media screen and (min-width: 1146px){
+  #Values .Col-Dynamic{ /* grabs Dynamic left-to-right row */
+    width: 100%; /* sets width as wide as screen but...*/
+    max-width: calc( (3 * 32px) + (4 * 240px) ); /* Caps width at the size of content (240*4) plus gaps (32*3) to center when at 4 cards wide*/
+  }
+}
+@media screen and (max-width: 1145px){
+  #Values .Col-Dynamic{ /* grabs Dynamic left-to-right row */
+    flex-wrap: wrap; /* lets row reflow into muliple rows*/
+    width: 512px; /* sets width until next breakpoint*/
+  }
+}
+@media screen and (max-width: 600px){
+  #Values .Col-Dynamic{ /* grabs Dynamic left-to-right row */
+    width: min-content; /* Sets width to be size of a single card of content */
+  }
+  #Values .Col-Dynamic .On-Screen-Target-For-Child-Cards .Preview-Card-Large{ /* Grabs value  cards */
+    min-width: 200px; /* caps min width*/
+    width: calc(100vw - 44px); /* Tries to be as wide as screen minus margins (22px each)*/
+    max-width: 240px; /* caps max width*/
+  }
+}
+
+/* -------- #Contact responsivity -------- */
+@media screen and (min-width: 1126px){ /* when screen ABOVE 976px wide */
+  #Contact .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 33%; /* Initial width*/
+  }
+}
+@media screen and (max-width: 1125px){
+  #Contact .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 50%; /* Slightly wider */
+  }
+}
+@media screen and (max-width: 745px){
+  #Contact .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 66%; /* Slightly wider */
+  }
+}
+@media screen and (max-width: 600px){
+  #Contact .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 75%; /* Slightly wider */
+  }
+}
+@media screen and (max-width: 480px){
+  #Contact .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: calc(100% - 44px); /* as wide as screen minus two 22px margins */
+  }
 }
