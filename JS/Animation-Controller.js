@@ -24,7 +24,7 @@ const callback = (entries) => {
         if (entry.target.classList.contains('Card-In')
         //|| entry.target.classList.contains('Simple-In')
         // Simple-ins are permanent once they've entered the screen
-        && !entry.target.classList.contains('Entered-Screen')){
+        && entry.target.classList.contains('Entered-Screen')){
           entry.target.classList.remove('Entered-Screen');
         }
         //checks all children of the intersecting On-Screen-Target to see if they are the element to be animated
@@ -45,8 +45,6 @@ const callback = (entries) => {
 //threshold sets how much of the intersecting item needs to be on screen a threshold of 0.3 means intersecting items need to be 30% onscreen to trigger
 
 let onScreenObserver = new IntersectionObserver(callback, {threshold:0.7});
-
-//Anything with the class 'Preview-Card-Large' will animate when onscreen
 
 const cardAnimationItems = document.querySelectorAll('.On-Screen-Target-For-Child-Cards');
 cardAnimationItems.forEach(item => {

@@ -13,10 +13,12 @@
   <meta property="og:image" content=""/> <!-- TO DO-->
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
+  <!-- Lets the chrome dev tool recognize media queries: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <!-- Add Favicon -->
-  <link href="CSS/Main.css" rel="stylesheet">
   <link href="CSS/Fonts.css" rel="stylesheet">
   <link href="CSS/Flexbox.css" rel="stylesheet">
+  <link href="CSS/Main.css" rel="stylesheet">
     <link href="CSS/About.css" rel="stylesheet">
   <!-- importing fonts here makes loading faster -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +47,7 @@
   </nav>
 
 <section id="About" class="Top-To-Bottom-Column-Centered">
-  <div class="Left-To-Right-Row Col-60">
+  <div class="Left-To-Right-Row Col-Dynamic">
     <div class="Top-To-Bottom-Column Col-50">
       <!--IMAGE GOES HERE-->
     </div>
@@ -66,60 +68,68 @@
 </section>
 <section id="Values" class="Top-To-Bottom-Column-Centered">
   <h2>My Values</h2>
-  <div class="Left-To-Right-Row Col-100 On-Screen-Target-For-Child-Cards">
-    <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-0">
-      <div class="Preview-Card-Header">
-        <h4>Acting in service</h4>
-      </div>
-      <div class="Preview-Card-Content">
-        <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 44H4V88H20V44Z"/>
-        <path d="M64 13C66.6 9.96 70.64 8 74.8 8C82.2 8 88 13.8 88 21.2C88 30.28 76.36 40.8 64 52C51.64 40.76 40 30.24 40 21.2C40 13.8 45.8 8 53.2 8C57.36 8 61.4 9.96 64 13Z"/>
-        <path d="M80 68H52L43.64 65.08L44.96 61.32L52 64H63.28C65.88 64 68 61.88 68 59.28C68 57.32 66.76 55.56 64.92 54.84L35.88 44H28V80.08L56 88L88.04 76C88 71.6 84.44 68 80 68Z"/>
-        </svg>
-        <p>My decisions impact real people and I commit my support to them by lowering accessibility barriers.</p>
-      </div>
-    </div>
-    <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-0-5">
-      <div class="Preview-Card-Header">
-        <h4>Enjoying the process</h4>
-      </div>
-      <div class="Preview-Card-Content">
-        <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M62 44C65.3137 44 68 41.3137 68 38C68 34.6863 65.3137 32 62 32C58.6863 32 56 34.6863 56 38C56 41.3137 58.6863 44 62 44Z"/>
-        <path d="M34 44C37.3137 44 40 41.3137 40 38C40 34.6863 37.3137 32 34 32C30.6863 32 28 34.6863 28 38C28 41.3137 30.6863 44 34 44Z"/>
-        <path d="M47.96 8C25.88 8 8 25.92 8 48C8 70.08 25.88 88 47.96 88C70.08 88 88 70.08 88 48C88 25.92 70.08 8 47.96 8ZM48 80C30.32 80 16 65.68 16 48C16 30.32 30.32 16 48 16C65.68 16 80 30.32 80 48C80 65.68 65.68 80 48 80ZM28 56C31.12 65.36 38.88 72 48 72C57.12 72 64.88 65.36 68 56H28Z"/>
-        </svg>
-        <p>Inviting play generates surprising ideas. On top of having fun, it boosts buy-in, and makes teammates feel valued.</p>
+  <div class="Left-To-Right-Row Col-Dynamic">
+    <div class="On-Screen-Target-For-Child-Cards">
+      <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-0">
+        <div class="Preview-Card-Header">
+          <h4>Acting in service</h4>
+        </div>
+        <div class="Preview-Card-Content">
+          <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 44H4V88H20V44Z"/>
+          <path d="M64 13C66.6 9.96 70.64 8 74.8 8C82.2 8 88 13.8 88 21.2C88 30.28 76.36 40.8 64 52C51.64 40.76 40 30.24 40 21.2C40 13.8 45.8 8 53.2 8C57.36 8 61.4 9.96 64 13Z"/>
+          <path d="M80 68H52L43.64 65.08L44.96 61.32L52 64H63.28C65.88 64 68 61.88 68 59.28C68 57.32 66.76 55.56 64.92 54.84L35.88 44H28V80.08L56 88L88.04 76C88 71.6 84.44 68 80 68Z"/>
+          </svg>
+          <p>My decisions impact real people and I commit my support to them by lowering accessibility barriers.</p>
+        </div>
       </div>
     </div>
-    <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-1">
-      <div class="Preview-Card-Header">
-        <h4>Learning over knowing</h4>
-      </div>
-      <div class="Preview-Card-Content">
-        <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M52 34.28C48.84 34.28 46.28 36.84 46.28 40C46.28 43.16 48.84 45.72 52 45.72C55.16 45.72 57.72 43.16 57.72 40C57.72 36.84 55.16 34.28 52 34.28Z"/>
-        <path d="M52 12C37 12 24.8 23.76 24.08 38.56L16.4 48.8C15.4 50.12 16.36 52 18 52H24V64C24 68.4 27.6 72 32 72H36V84H64V65.28C73.44 60.8 80 51.16 80 40C80 24.52 67.48 12 52 12ZM64 40C64 40.52 63.96 41.04 63.92 41.56L67.24 44.2C67.56 44.44 67.64 44.84 67.44 45.2L64.24 50.76C64.04 51.12 63.6 51.24 63.28 51.12L59.32 49.52C58.48 50.16 57.6 50.68 56.64 51.08L56 55.32C55.96 55.72 55.6 56 55.2 56H48.8C48.4 56 48.08 55.72 48 55.32L47.4 51.08C46.4 50.68 45.52 50.16 44.68 49.52L40.72 51.12C40.36 51.24 39.92 51.12 39.72 50.76L36.52 45.2C36.32 44.88 36.4 44.44 36.72 44.2L40.08 41.56C40.04 41.04 40 40.52 40 40C40 39.48 40.08 38.92 40.16 38.44L36.76 35.8C36.44 35.56 36.36 35.16 36.56 34.76L39.76 29.24C39.96 28.88 40.36 28.76 40.72 28.88L44.72 30.48C45.52 29.88 46.44 29.32 47.4 28.92L48 24.68C48.08 24.28 48.4 24 48.8 24H55.2C55.6 24 55.92 24.28 56 24.68L56.6 28.92C57.56 29.32 58.44 29.84 59.28 30.48L63.28 28.88C63.64 28.76 64.08 28.88 64.24 29.24L67.44 34.76C67.64 35.12 67.56 35.56 67.24 35.8L63.84 38.44C63.96 38.92 64 39.44 64 40Z"/>
-        </svg>
-        <p>Curiosity is the foundation of my growth mindset. I value learning new skills, and listening to new perspectives.</p>
+    <div class="On-Screen-Target-For-Child-Cards">
+      <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-0-5">
+        <div class="Preview-Card-Header">
+          <h4>Enjoying the process</h4>
+        </div>
+        <div class="Preview-Card-Content">
+          <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M62 44C65.3137 44 68 41.3137 68 38C68 34.6863 65.3137 32 62 32C58.6863 32 56 34.6863 56 38C56 41.3137 58.6863 44 62 44Z"/>
+          <path d="M34 44C37.3137 44 40 41.3137 40 38C40 34.6863 37.3137 32 34 32C30.6863 32 28 34.6863 28 38C28 41.3137 30.6863 44 34 44Z"/>
+          <path d="M47.96 8C25.88 8 8 25.92 8 48C8 70.08 25.88 88 47.96 88C70.08 88 88 70.08 88 48C88 25.92 70.08 8 47.96 8ZM48 80C30.32 80 16 65.68 16 48C16 30.32 30.32 16 48 16C65.68 16 80 30.32 80 48C80 65.68 65.68 80 48 80ZM28 56C31.12 65.36 38.88 72 48 72C57.12 72 64.88 65.36 68 56H28Z"/>
+          </svg>
+          <p>Inviting play generates surprising ideas. On top of having fun, it boosts buy-in, and makes teammates feel valued.</p>
+        </div>
       </div>
     </div>
-    <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-1-5">
-      <div class="Preview-Card-Header">
-        <h4>Doing the right thing</h4>
+    <div class="On-Screen-Target-For-Child-Cards">
+      <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-1">
+        <div class="Preview-Card-Header">
+          <h4>Learning over knowing</h4>
+        </div>
+        <div class="Preview-Card-Content">
+          <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M52 34.28C48.84 34.28 46.28 36.84 46.28 40C46.28 43.16 48.84 45.72 52 45.72C55.16 45.72 57.72 43.16 57.72 40C57.72 36.84 55.16 34.28 52 34.28Z"/>
+          <path d="M52 12C37 12 24.8 23.76 24.08 38.56L16.4 48.8C15.4 50.12 16.36 52 18 52H24V64C24 68.4 27.6 72 32 72H36V84H64V65.28C73.44 60.8 80 51.16 80 40C80 24.52 67.48 12 52 12ZM64 40C64 40.52 63.96 41.04 63.92 41.56L67.24 44.2C67.56 44.44 67.64 44.84 67.44 45.2L64.24 50.76C64.04 51.12 63.6 51.24 63.28 51.12L59.32 49.52C58.48 50.16 57.6 50.68 56.64 51.08L56 55.32C55.96 55.72 55.6 56 55.2 56H48.8C48.4 56 48.08 55.72 48 55.32L47.4 51.08C46.4 50.68 45.52 50.16 44.68 49.52L40.72 51.12C40.36 51.24 39.92 51.12 39.72 50.76L36.52 45.2C36.32 44.88 36.4 44.44 36.72 44.2L40.08 41.56C40.04 41.04 40 40.52 40 40C40 39.48 40.08 38.92 40.16 38.44L36.76 35.8C36.44 35.56 36.36 35.16 36.56 34.76L39.76 29.24C39.96 28.88 40.36 28.76 40.72 28.88L44.72 30.48C45.52 29.88 46.44 29.32 47.4 28.92L48 24.68C48.08 24.28 48.4 24 48.8 24H55.2C55.6 24 55.92 24.28 56 24.68L56.6 28.92C57.56 29.32 58.44 29.84 59.28 30.48L63.28 28.88C63.64 28.76 64.08 28.88 64.24 29.24L67.44 34.76C67.64 35.12 67.56 35.56 67.24 35.8L63.84 38.44C63.96 38.92 64 39.44 64 40Z"/>
+          </svg>
+          <p>Curiosity is the core of my growth mindset. I value learning new skills, and listening to new perspectives.</p>
+        </div>
       </div>
-      <div class="Preview-Card-Content">
-        <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M48 8C25.92 8 8 25.92 8 48C8 70.08 25.92 88 48 88C70.08 88 88 70.08 88 48C88 25.92 70.08 8 48 8ZM44 79.72C28.2 77.76 16 64.32 16 48C16 45.52 16.32 43.16 16.84 40.84L36 60V64C36 68.4 39.6 72 44 72V79.72ZM71.6 69.56C70.56 66.32 67.6 64 64 64H60V52C60 49.8 58.2 48 56 48H32V40H40C42.2 40 44 38.2 44 36V28H52C56.4 28 60 24.4 60 20V18.36C71.72 23.12 80 34.6 80 48C80 56.32 76.8 63.88 71.6 69.56Z"/>
-        </svg>
-        <p>Making products efficient isn’t enough: I aim to help people lead fulfilling lives, and to leave a positive impact on the world.</p>
+    </div>
+    <div class="On-Screen-Target-For-Child-Cards">
+      <div class="Preview-Card-Large Card-In Col-25 Animation-Delay-0-1-5">
+        <div class="Preview-Card-Header">
+          <h4>Doing the right thing</h4>
+        </div>
+        <div class="Preview-Card-Content">
+          <svg class="SVG-Icon" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M48 8C25.92 8 8 25.92 8 48C8 70.08 25.92 88 48 88C70.08 88 88 70.08 88 48C88 25.92 70.08 8 48 8ZM44 79.72C28.2 77.76 16 64.32 16 48C16 45.52 16.32 43.16 16.84 40.84L36 60V64C36 68.4 39.6 72 44 72V79.72ZM71.6 69.56C70.56 66.32 67.6 64 64 64H60V52C60 49.8 58.2 48 56 48H32V40H40C42.2 40 44 38.2 44 36V28H52C56.4 28 60 24.4 60 20V18.36C71.72 23.12 80 34.6 80 48C80 56.32 76.8 63.88 71.6 69.56Z"/>
+          </svg>
+          <p>Making products efficient isn’t enough: I aim to help people lead fulfilling lives, and to leave a positive impact on the world.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <section id="Contact" class="Top-To-Bottom-Column-Centered">
-  <div class="Top-To-Bottom-Column On-Screen-Target-For-Child-Cards Col-40">
+  <div class="Top-To-Bottom-Column On-Screen-Target-For-Child-Cards Col-Dynamic">
     <div class="Preview-Card-Large Card-In Animation-Delay-0-0">
       <div class="Preview-Card-Header">
         <h4> Get in touch:</h4>
