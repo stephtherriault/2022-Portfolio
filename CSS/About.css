@@ -7,7 +7,7 @@ h2{
 }
 
 .SVG-Icon{
-  opacity: 60%;
+  opacity: 75%;
   width: 50%;
   margin: auto;
   fill: #FECA06;
@@ -31,7 +31,7 @@ h2{
   padding-bottom: 25vh;
   padding-left: 44px;
   padding-right: 44px;
-    --Drop-Shadow-Color: rgba(242, 174, 0, 0.4);
+    --Drop-Shadow-Color: rgba(33, 96, 239, 0.4);
 }
 #Values .Left-To-Right-Row{
   align-items: flex-start;
@@ -48,13 +48,13 @@ h2{
 
 #Contact{
   padding: 20vh 0px 30vh;
-  background-color: #F8E294;
+  background-color: rgba(33, 96, 239, 0.4);
   --Drop-Shadow-Color: rgba(228, 64, 255, 0.4);
   width: 100%;
 }
 #Contact .Button{
   background: rgb(163,0,200);
-  background: linear-gradient(180deg, rgba(163,0,200,1) 0%, rgba(128,0,176,1) 6%, rgba(128,0,176,1) 95%, rgba(68,0,154,1) 100%);
+  background: linear-gradient(180deg, rgba(163,0,200,1) 0%, rgba(138,10,186,1) 6%, rgba(138,10,186,1) 95%, rgba(68,0,154,1) 100%);
   border: none;
 }
 #Contact .Button:hover{
