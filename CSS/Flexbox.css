@@ -41,6 +41,12 @@
   body nav{
     padding:4px 22px 0px; /* reduces nav padding. Default is 22px 44px 22px*/
     height: 62px; /* reduces nav height to account for padding. Default is 96px*/
-    background: #FFFFFF;  /* Gives Nav a solid white background for overlapping content*/
+  }
+  .Content-Clipper{
+    clip-path: none; /* reduces size of inset to match new margins*/
+    margin-top: 0px; /* reduces top margin size to account for new nav height*/
+  }
+  .Scrollable-Area{
+    height:100vh;
   }
 }

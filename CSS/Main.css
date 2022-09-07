@@ -150,6 +150,37 @@ nav .Subtle-Link{
 #Steph-Therriault-Intro .Button:active{
   color: #420059;
 }
+#Steph-Therriault-Intro .Home-Lottie{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FBC4DC;
+  aspect-ratio: 207 / 329;
+}
+#Steph-Star-Notch{
+  background-color: #31180A;
+  width: 50%;
+  border-radius: 0px 0px 16px 16px;
+  height: 22px;
+  padding: 0px 15%;
+  gap:4px;
+}
+#Steph-Star-Notch div{
+  height:3px;
+  border-radius: 16px;
+  background-color: #FBC4DC;
+  margin-top: -1.5px;
+}
+#Steph-Star-Notch .Notch-Dot{
+  width:3px;
+}
+#Steph-Star-Notch .Notch-Line{
+  width:100%;
+}
+#Steph-Star{
+  width:100%;
+}
+
 #Case-Study-Previews{
   display: flex;
   flex-direction: column;
@@ -434,30 +465,30 @@ textarea{
   transition: all 0.15s cubic-bezier(0.93, 0.41, 0.27, 0.73);
   -webkit-transition: all 0.15s cubic-bezier(0.93, 0.41, 0.27, 0.73);
   box-shadow: 0px 0px var(--Drop-Shadow-Color);
-  transform: translate(16px, 16px);
-  -webkit-transform: translate(16px, 16px);
+  transform: translate(-16px, 16px);
+  -webkit-transform: translate(-16px, 16px);
 }
 .Card-In.Entered-Screen{
   transition: all 0.3s cubic-bezier(0.93, 0.41, 0.27, 0.73);
   -webkit-transition: all 0.3s cubic-bezier(0.93, 0.41, 0.27, 0.73);
-  transition-delay: var(--Animation-Delay);
   transform: translate(0px, 0px);
   -webkit-transform: translate(0px, 0px);
-  box-shadow: 16px 16px var(--Drop-Shadow-Color);
+  box-shadow: -16px 16px var(--Drop-Shadow-Color);
+  transition-delay: var(--Animation-Delay);
 }
 a .Card-In.Entered-Screen:hover, a.Card-In.Entered-Screen:hover, a:focus .Card-In.Entered-Screen, a.Card-In.Entered-Screen:focus{
   transition: all 0.1s ease-out;
   -webkit-transition: all 0.1s ease-out;
-  transform: translate(-2px, -2px);
-  -webkit-transform: translate(-2px, -2px);
-  box-shadow: 18px 18px var(--Drop-Shadow-Color);
+  transform: translate(2px, -2px);
+  -webkit-transform: translate(2px, -2px);
+  box-shadow: -18px 18px var(--Drop-Shadow-Color);z
 }
 a .Card-In.Entered-Screen:active, a.Card-In.Entered-Screen:active{
   transition: all 0.1s ease-out;
   -webkit-transition: all 0.1s ease-out;
   transform: translate(0px, 0px);
   -webkit-transform: translate(0px, 0px);
-  box-shadow: 16px 16px var(--Drop-Shadow-Color);
+  box-shadow: -16px 16px var(--Drop-Shadow-Color);
 }
 .Simple-In{
   opacity:0%;
@@ -508,5 +539,210 @@ a .Card-In.Entered-Screen:active, a.Card-In.Entered-Screen:active{
   }
   100%{
     transform: rotate(0.06turn);
+  }
+}
+
+
+
+/* -------- #Steph-Therriault-Intro responsivity -------- */
+@media screen and (min-width: 1116px){ /*at widths bigger than 1116 px */
+  #Steph-Therriault-Intro .Col-Dynamic{
+    width: 75%; /* Set initial width */
+    max-width: 875px; /* cap at comfortable size*/
+  }
+}
+@media screen and (max-width: 1115px){ /* When thinner than 1115px */
+  #Steph-Therriault-Intro .Col-Dynamic{
+    width: 100%; /* as wide as can be within padding*/
+  }
+}
+@media screen and (max-width: 875px){
+  #Steph-Therriault-Intro .Intro-Text{ /* grabs special h2 used for intro */
+    font-size: 22px; /* reduces size */
+    line-height: 26px; /* reduces size */
+  }
+}
+@media screen and (max-width: 730px){
+  #Steph-Therriault-Intro h2{
+    font-size: 32px; /*reduce heading text size. Default is 48px */
+    line-height: 36px; /*reduce heading line height. Default is 52lh */
+  }
+  #Steph-Therriault-Intro .Intro-Text{ /* grabs special h2 used for intro */
+    font-size: 18px; /* reduces size */
+    line-height: 22px; /* reduces size */
+  }
+}
+@media screen and (max-width: 585px){
+  #Steph-Therriault-Intro{
+    min-height: auto; /* sets height to be based on contents, no longer screen size */
+    margin: 5vh 0vh 20vh; /* new margins for column layout */
+  }
+  #Steph-Therriault-Intro .Col-Dynamic{
+    flex-direction: column-reverse; /* Turns main row into column */
+  }
+  #Steph-Therriault-Intro .Col-Dynamic .Col-33{
+    width:66%; /* wider width */
+    --Animation-Delay: 0s;
+  }
+  #Steph-Therriault-Intro .Col-Dynamic .Top-To-Bottom-Column{
+    width:100%; /* wider width */
+    gap: 22px; /* smaller gap */
+    --Animation-Delay: 0s; /* removes 0.2s animation delay from lottie*/
+  }
+}
+@media screen and (max-width: 480px){
+  #Steph-Therriault-Intro{
+    padding: 0px 32px 0px; /* applies new padding for no clipper on mobile*/
+    margin: 15vh 0 20vh; /* new top margin for mobile */
+  }
+  #Steph-Therriault-Intro .Intro-Text{ /* grabs special h2 used for intro */
+    font-size: 16px; /* reduces size */
+    line-height: 20px; /* reduces size */
+  }
+  #Steph-Therriault-Intro .Col-Dynamic .Top-To-Bottom-Column .Preview-Card-Large:first-child{
+    width: 100%; /* Sets header text to be as wide as screen (minus padding) */
+  }
+  #Steph-Therriault-Intro .Col-Dynamic .Top-To-Bottom-Column .Preview-Card-Large:first-child .Preview-Card-Content{
+    align-items: center; /* centers text in container */
+    text-align: center; /* center aligns text */
+  }
+}
+@media screen and (max-width: 325px){
+  #Steph-Therriault-Intro .Col-Dynamic .Home-Lottie{
+    width:100%; /* wide lottie for small screens*/
+  }
+  #Steph-Therriault-Intro h2{
+    font-size: 8vw; /* scaling text size */
+    line-height: 9vw; /* scaling line height */
+  }
+}
+
+/* -------- #Case-Study-Previews responsivity -------- */
+@media screen and (min-width: 1101px){ /* anything OVER 1101px*/
+  #Case-Study-Previews .Col-Dynamic{ /* both dynamic columns */
+    width: 50%; /* initial width */
+  }
+}
+@media screen and (max-width: 1100px){ /* anything UNDER 1100px*/
+  #Case-Study-Previews .Col-Dynamic{ /* both dynamic columns */
+    width: 75%; /* wider */
+  }
+}
+@media screen and (max-width: 790px){
+  #Case-Study-Previews .Col-Dynamic{ /* both dynamic columns */
+    width: 100%; /* wider */
+  }
+}
+@media screen and (max-width: 635px){
+  #Case-Study-Previews .Col-Dynamic:nth-child(2){ /*just the second dynamic column */
+    flex-wrap: wrap; /* lets cards reflow */
+  }
+  #Case-Study-Previews .Col-Dynamic:nth-child(2){
+    width: 100%;
+  }
+  #Case-Study-Previews .Col-Dynamic:nth-child(2) .Subtle-Link{
+    max-width: calc( 50% - ( 32px / 2 ) ); /* sets min width so container can reflow, width is half of screen size minus half the gap between items. This is needed to make sure items are exactly as wide as they can be without causing reflow */
+  }
+}
+@media screen and (max-width: 480px){
+  #Case-Study-Previews{
+    padding: 50px 32px 66px; /* adjusts padding for new margins */
+  }
+  #Case-Study-Previews .Col-Dynamic:nth-child(2){
+    flex-wrap: nowrap; /* back to one full row*/
+    gap: 20px; /* smaller gap */
+  }
+  #Case-Study-Previews .Col-Dynamic:nth-child(2) .Preview-Card-Header{
+    visibility: hidden; /* this whole section basically turns preview card headers off */
+    height: 0px;
+    min-height: 0px;
+    margin-top: 0px;
+    border: none;
+  }
+  #Case-Study-Previews .Col-Dynamic:nth-child(2) img{
+    border-bottom-left-radius: 12px; /* now that headers are off, images must be round on the bottom */
+    border-bottom-right-radius: 12px;
+  }
+  #Case-Study-Previews .Col-Dynamic:nth-child(2) h3{
+    visibility: hidden; /* this section collapses and hides text */
+    height: 0px;
+    width: 0px;
+  }
+}
+@media screen and (max-width: 325px){
+  #Case-Study-Previews .Col-Dynamic:nth-child(2){
+    flex-wrap: wrap; /* lets container wrap again */
+  }
+  #Case-Study-Previews .Col-Dynamic:nth-child(2) .Subtle-Link{
+    max-width: calc( 50% - ( 20px / 2 ) ); /* sets min width so container can reflow, width is half of screen size minus half the gap between items. This is needed to make sure items are exactly as wide as they can be without causing reflow */
+  }
+}
+
+/* -------- Article Previews Responsivity -------- */
+@media screen and (min-width: 966px){ /* anything OVER 966px*/
+ article .Col-Dynamic{ /* grabs dynamic columns from all articles*/
+   width: 75%; /* sets initial width */
+ }
+}
+@media screen and (max-width: 1100px){ /* anything UNDER 1100px*/
+ article .Col-Dynamic h1{ /* grabs h1 titles */
+   font-size: 6.5vw; /* makes size dynamic*/
+   line-height: 6vw; /* makes height dynamic*/
+ }
+}
+@media screen and (max-width: 965px){
+ article .Col-Dynamic{
+   width: 100%; /* widens column */
+ }
+ article .Col-Dynamic h1{
+   font-size: 64px; /* sets title size to be static again */
+   line-height: 54px; /* sets title height to be static again */
+ }
+}
+@media screen and (max-width: 775px){
+ article .Col-Dynamic{
+   flex-direction: column; /* container goes vertical for space */
+   gap: 22px; /* smaller gap for vertical column */
+   width: 75%; /* adjusted width */
+ }
+ article .Col-Dynamic .Col-40{ /* grabs the text container of text cards */
+   width:100%; /* wider width */
+   align-items: flex-end; /* right aligning CTAs for single column */
+   gap:22px; /* adjusting gap for vertical column*/
+   }
+article .Col-Dynamic .Col-60{ /* grabs the container parent of the image card*/
+   width:100%; /* wider width */
+ }
+}
+@media screen and (max-width: 645px){
+ article .Col-Dynamic{
+   width: 100%; /* widens column for best use of small space */
+ }
+ article .Col-Dynamic h1{
+   font-size: 11vw; /* sets title size to be dynamic*/
+   line-height: 9vw; /* sets title height to be dynamic*/
+ }
+}
+@media screen and (max-width: 480px){
+ #Haven, #Flowpub { /* have to specify, or other css overwrites padding */
+   padding: 20vh 32px 30vh; /* sets appropriate margins for mobile screens */
+ }
+ article .Col-Dynamic .Col-60 img{ /* grabs the splash image */
+   margin-top: 4px; /* lessens top margin */
+   border-radius: 8px; /* reduces border radius */
+ }
+ article .Col-Dynamic .Col-40{
+   gap:0px; /* removes gap doubling up when content is */
+ }
+ article .Col-Dynamic .Col-40 .Preview-Card-Large{
+   height: 0px; /* this whole section removes card and text blurb for small devices*/
+   width: 0px;
+   visibility: hidden;
+   border: none;
+ }
+}
+@media screen and (max-width: 365px){
+  article .Col-Dynamic .Button{
+     width: min-content; /* this is mainly for flowpub button "Request Access" as it reflows to be two lines */
   }
 }
