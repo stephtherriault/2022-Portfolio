@@ -65,3 +65,31 @@ hoverableItems.forEach(item => {
     }
   }, false);
 });
+
+
+const callbackMedia = (entries) => {
+  entries.forEach(
+    (entry) => {
+      console.log("callbackMedia is being called");
+      if (entry.isIntersecting && !entry.classList.contains('Image-Loaded') ){
+        //lets me know intersection code is working:
+        console.log("onScreenMediaObserver: intersection detected");
+        entry.classList.add('Image-Loaded');
+      }
+    }
+  );
+}
+
+/* code disabled for now, unsure of why it's not working.
+let onScreenMediaObserver = new IntersectionObserver(callbackMedia, {threshold:0.7});
+
+const mediaItems = document.images;
+
+console.log("Code fails after this");
+
+mediaItems.forEach(item => {
+  onScreenMediaObserver.observe(item);
+});
+console.log("code fails before this");
+
+*/
