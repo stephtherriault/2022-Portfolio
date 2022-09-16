@@ -1,0 +1,19 @@
+#Title{
+  height: 100vh;
+  padding: 0 44px;
+}
+#Title .Top-To-Bottom-Column-Centered{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#Title .Left-To-Right-Row{
+  justify-content: space-between;
+  align-items: flex-start;
+  width:100%
+}
+#Title .Col-Dynamic{
+    width: 50%;
+    min-width: 300px;
+    max-width: 430px;
+    gap:18px;
+}
