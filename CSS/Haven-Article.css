@@ -13,14 +13,15 @@ h2{
 }
 .Haven-Header{
   align-items: center;
-  height: 75vh;
   gap: 0;
 }
 .Haven-Header-BG-Stack{
   border: 6px solid #31180A;
   border-radius: 0px 0px 16px 16px;
-  margin-top: calc( 75vh + ( -1 * ( ( ((100% - 12px) * 1.78) + ((100% - 12px) * 1.78 * 0.65) ) + 12px) )  );
+  /* margin-top: calc( 75vh + ( -1 * ( ( ((100% - 12px) * 1.78) + ((100% - 12px) * 1.78 * 0.65) ) + 12px) )  ); */
   /* the math on this one was fucking tricky, if you're trying to fix this in the future and you're mad I haven't explained this bs, then I'm truly sorry. If you're trying to make this responsive and the image is sliding too far down or up, try changing increasing/decreasing the column width of the parent column */
+  /* UPDATE: The above code would make sure the splash image would be always end 75% of the way down the screen, but this wasn't needed and was overcomplicating responsive efforts. The updated version below sets a negative top margin to make sure the repeated image doesn't show */
+  margin-top: calc( ( -1 * (100% - 12px) * 1.78 * 0.65 ) - 6px );
 }
 .Haven-Header-BG-Stack img:first-child{
   position:relative;
@@ -134,7 +135,6 @@ h2{
 
 .Article-Title-Column{
   align-items: center;
-  margin-top: 12px;
   margin-bottom: 24px;
   width:100%;
   gap:4px;
@@ -148,7 +148,7 @@ h2{
   margin-top: 4px;
 }
 .Context-Summary h3{
-  width:100%;
+  width:fit-content;
   color: #0036B1;
   border-bottom: 1px solid #0036B1;
 }
@@ -157,62 +157,82 @@ h2{
 }
 
 .Left-To-Right-Grid Img{
-  width: calc(33% - 8px);
+  width: calc(33% - 4.5px);
   border-radius: 4px;
 }
 
 #Context{
-  padding-bottom: 20vh
+  padding-bottom: 20vh;
+  padding: 0px 44px 20vh 44px;
 }
 
 #The-Problem{
-  padding: 15vh 0px;
+  padding: 15vh 44px 15vh 44px;
   background: rgb(60,136,222);
   background: linear-gradient(180deg, rgba(60,136,222,1) 0%, rgba(18,126,247,1) 100%);
     --Drop-Shadow-Color: rgba(255, 255, 255, 0.4);
 }
+#The-Problem .Top-To-Bottom-Column.Text-Column.Light-Text{
+  flex-grow: 1;
+}
+#The-Problem .Pie-Chart{
+  max-width: 350px;
+  max-height: 350px;
+}
+#The-Problem .Col-Dynamic.Top-To-Bottom-Column .Left-To-Right-Row:last-child{
+  align-items: flex-start;
+}
+#The-Problem .Col-Dynamic.Top-To-Bottom-Column .Left-To-Right-Row:last-child .Preview-Card-Large{
+  width:33%;
+}
 
 #Persona{
+  padding: 10vh 44px 20vh 44px;
   padding-bottom: 10vh;
   padding-top: 20vh;
 
 }
 
 #Journeymap{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
 }
 
 #Current-Offerings{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
 }
 
 #Process{
-  padding: 15vh 0px;
+  padding: 15vh 44px 25vh 44px;
 }
 #Process .Left-To-Right-Grid{
-  margin-bottom: 10vh;
+  margin-bottom: 44px;
 }
 #Process .Left-To-Right-Row{
-  padding-top: 15vh;
+  padding-top: 88px;
+  padding-bottom: 22px;
+  gap: 12px;
 }
 
 #Iteration-My-Plan{
-  padding: 15vh 0px;
+  padding: 40vh 44px 15vh 44px;
   background: rgb(60,136,222);
   background: linear-gradient(180deg, rgba(60,136,222,1) 0%, rgba(18,126,247,1) 100%);
   --Drop-Shadow-Color: rgba(255, 255, 255, 0.4);
-  /*TO DO: Make gap not look like ass */
+  gap: 188px;
+}
+#Iteration-My-Plan .Text-Column{
+  margin-bottom: 30vh;
 }
 
 #Prototyping{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
 }
 #Prototyping #Prototyping-Inverse-Shadow-Card{
   --Drop-Shadow-Color: rgb(60,136,222, 0.7);
 }
 
 #Content-Engagement-Testing{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
   background: rgb(60,136,222);
   background: linear-gradient(180deg, rgba(60,136,222,1) 0%, rgba(18,126,247,1) 100%);
   --Drop-Shadow-Color: rgba(255, 255, 255, 0.4);
@@ -220,38 +240,1031 @@ h2{
 }
 
 #Motion-Design{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
+}
+#Motion-Design figcaption{
+  text-align: center;
 }
 
 #Final-Interface{
-  padding: 10vh 0px;
+  padding: 10vh 44px;
   background: rgb(60,136,222);
   background: linear-gradient(0deg, rgba(60,136,222,1) 0%, rgba(26,122,231,1) 11%, rgba(48,143,251,1) 15%, rgba(99,172,255,1) 53%, rgba(144,196,255,0) 100%);
   Gap: 22vh;
 }
 
 #Reflective-Content{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
+}
+#Reflective-Content .Left-To-Right-Row{
+  gap:44px;
 }
 
 #Plan-Growth{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
 }
 #Plan-Growth figcaption{
  text-align: center;
 }
 
 #Privacy{
-  padding: 10vh 0px;
+  padding: 10vh 44px;
 }
 
 #Next-Steps{
-  padding: 10vh 0px;
+  padding: 20vh 44px;
 }
 
 #Learning{
-  padding: 15vh 0px;
+  padding: 15vh 44px;
 }
 #Learning figcaption{
  text-align: center;
+}
+
+/* -------- RESPONSIVITY BEYOND THIS POINT --------*/
+
+/* -------- #Context responsivity -------- */
+@media screen and (min-width: 965px){ /* anything ABOVE 965px */
+  #Context .Left-To-Right-Row:nth-child(1){ /* grabs row that contains dynamic cols*/
+    max-width:1200px; /* sets max width for wide screens 1200px is the total of each child's max width (300 + 300 + 600)*/
+    margin-left: auto; /* center aligns row at max width */
+    margin-right: auto; /* center aligns row at max width */
+  }
+  #Context .Col-Dynamic:nth-child(1){ /* empty left column*/
+    width: 25%; /* sets initial width */
+    max-width: 300px; /* max width on large screens */
+  }
+  #Context .Col-Dynamic:nth-child(2){ /* center column*/
+    width: 50%; /* sets initial width */
+    gap: 22px; /* overrides and sets initial gap */
+    max-width: 600px; /* max width on large screens */
+  }
+    #Context .Col-Dynamic:nth-child(2) .Haven-Header{ /* splash header WITHIN central column*/
+      width: 66%; /* sets initial width */
+    }
+  #Context .Col-Dynamic:nth-child(3){ /* context summary column*/
+    width: 25%; /* sets initial width */
+    max-width: 300px; /* max width on large screens */
+  }
+}
+@media screen and (max-width: 965px){ /* anything UNDER 965px */
+  #Context .Col-Dynamic:nth-child(1){ /* empty left column*/
+    width: 25%; /* sets initial width */
+  }
+  #Context .Col-Dynamic:nth-child(2){ /* center column*/
+    width: 50%; /* sets initial width */
+    gap: 22px; /* overrides and sets initial gap */
+  }
+    #Context .Col-Dynamic:nth-child(2) .Haven-Header{ /* splash header WITHIN central column*/
+      width: 80%; /* wider */
+    }
+  #Context .Col-Dynamic:nth-child(3){ /* context summary column*/
+    width: 25%; /* sets initial width */
+  }
+}
+@media screen and (max-width: 785px){ /* anything UNDER 785px */
+  #Context .Left-To-Right-Row:only-child { /* grabs large row container */
+    flex-direction: column; /* changes to column for better use of space*/
+    align-items: center; /* aligns items to be centered */
+    gap: 0px; /* reduces gap */
+  }
+  #Context .Col-Dynamic:nth-child(1){ /* empty left column*/
+    width: 0px; /* collapses empty div*/
+    height: 0px; /* collapses empty div*/
+  }
+  #Context .Col-Dynamic:nth-child(2){ /* center column*/
+    width: 80%; /* wider */
+  }
+    #Context .Col-Dynamic:nth-child(2) .Haven-Header{ /* splash header WITHIN central column*/
+      width: 60%; /* thinner */
+    }
+  #Context .Col-Dynamic:nth-child(3){ /* context summary column */
+    width: 80%; /* widens container to match 2nd dynamic column */
+    margin-top: 22px; /* adds space bewteen column and text above*/
+  }
+    #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column{ /* context summary column*/
+      flex-direction: row;
+      width: 100%; /* widens row to be size of container*/
+    }
+      #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column div{ /* all divs within context row */
+        width: 33%; /* evenly spaces child items*/
+      }
+}
+@media screen and (max-width: 615px){
+  #Context .Col-Dynamic:nth-child(2) .Haven-Header{ /* splash header WITHIN central column*/
+    width: 80%; /* wider */
+  }
+  #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column{
+    flex-wrap: wrap; /* lets row reflow */
+  }
+    #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column div{ /* all divs within context row */
+      width: calc( 50% - (16px / 2) ); /* evenly spaces 2 child items per row*/
+    }
+      #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column div:nth-child(1){ /* all divs within context row */
+        order: 1; /* Establishes item as first in the container */
+      }
+      #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column div:nth-child(2){ /* all divs within context row */
+        order: 3; /* shuffles this item to come third in the container */
+      }
+      #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column div:nth-child(3){ /* all divs within context row */
+        order: 2; /* shuffles this item to come second in the container */
+        height: 16px; /* reduces height to let second row ignore this tall item */
+      }
+}
+@media screen and (max-width: 480px){
+  #Context {
+    padding: 0px 22px 20vh 22px; /* sets appropriate padding for mobile screens*/
+  }
+  #Context .Col-Dynamic:nth-child(2){ /* center column*/
+    width: 90%; /* as wide as can be */
+  }
+  #Context .Col-Dynamic:nth-child(3){ /* context summary column */
+    width: 90%; /* widens container to match 2nd dynamic column */
+    margin-top: 22px; /* adds space bewteen column and text above*/
+  }
+}
+@media screen and (max-width: 380px){
+  #Context .Article-Title-Column{ /* grabs article title stack*/
+    gap:0px; /* removes gap */
+    margin-bottom: 0px; /* removes bottom margin */
+  }
+    #Context .Article-Title-Column h1{ /* grabs title */
+      font-size: 72px; /* smaller font size */
+      line-height: 72px; /* smaller line height */
+    }
+    #Context .Article-Title-Column h3{ /* grabs subtitle */
+      font-size: 14px; /* smaller font size */
+      line-height: 18px; /* smaller line height */
+    }
+  #Context .Col-Dynamic:nth-child(3) .Bottom-To-Top-Column li{ /* grabs list items in last dynamic row */
+    font-size: 14px; /* smaller font size */
+    line-height: 18px; /* smaller line height */
+  }
+}
+
+/* -------- #The-Problem responsivity -------- */
+@media screen and (min-width: 1060px){ /* anything ABOVE 1060px */
+  #The-Problem .Col-Dynamic{
+    width: 75%; /* sets initial width */
+    max-width: 925px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 1060px){ /* anything UNDER 1060px */
+  #The-Problem .Col-Dynamic{
+    width: 90%; /* wider */
+  }
+}
+@media screen and (max-width: 880px){ /* anything UNDER 880px */
+  #The-Problem .Col-Dynamic{
+    width: 100%; /* wide as possible */
+  }
+}
+@media screen and (max-width: 770px){ /* anything UNDER 770px */
+  #The-Problem .Col-Dynamic .Left-To-Right-Row:nth-child(1){ /* grabs text and pie chart container */
+    flex-direction: column-reverse;
+  }
+    #The-Problem .Col-Dynamic .Left-To-Right-Row:nth-child(1) div:nth-child(1){ /* grabs text column*/
+      width: 90%; /* */
+    }
+    #The-Problem .Col-Dynamic .Left-To-Right-Row:nth-child(1) div.Pie-Chart{ /* grabs pie chart */
+      width: 50vw; /* sets height at width to be wider */
+      height: 50vw;
+    }
+  #The-Problem .Col-Dynamic.Top-To-Bottom-Column .Left-To-Right-Row:last-child{ /* grabs card container */
+    flex-direction: column; /* changes row to column */
+    align-items: center; /* centers cards */
+  }
+    #The-Problem .Col-Dynamic.Top-To-Bottom-Column .Left-To-Right-Row:last-child .Preview-Card-Large{ /* grabs all cards */
+      width:60%; /* wider width for single column */
+    }
+}
+@media screen and (max-width: 510px){ /* anything UNDER 510px */
+  #The-Problem .Col-Dynamic.Top-To-Bottom-Column .Left-To-Right-Row:last-child .Preview-Card-Large{ /* grabs all cards */
+    width:80%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){ /* anything UNDER 510px */
+  #The-Problem{
+    padding: 15vh 22px 15vh 32px; /* sets appropriate padding for mobile screens */
+  }
+  #The-Problem .Col-Dynamic.Top-To-Bottom-Column .Left-To-Right-Row:last-child .Preview-Card-Large{ /* grabs all cards */
+    width:100%; /* as wide as can be */
+  }
+}
+
+/* -------- #Persona responsivity -------- */
+@media screen and (min-width: 1101px){ /* anything ABOVE 1101px */
+  #Persona .Col-Dynamic{
+    width:75%;
+    max-width: 1385px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 1100px){ /* anything UNDER 1100px */
+  #Persona .Col-Dynamic{
+    width:100%;
+  }
+}
+@media screen and (max-width: 815px){
+  #Persona .Col-Dynamic{
+    flex-direction: column-reverse;
+  }
+  #Persona .Col-Dynamic .Col-33{
+    width:50%;
+  }
+  #Persona .Col-Dynamic .Col-66{
+    width:75%;
+  }
+}
+@media screen and (max-width: 645px){
+  #Persona .Col-Dynamic .Col-33{
+    width:66%;
+  }
+  #Persona .Col-Dynamic .Col-66{
+    width:100%;
+  }
+}
+@media screen and (max-width: 540px){
+  #Persona .Col-Dynamic .Col-33{
+    width:80%;
+  }
+}
+@media screen and (max-width: 480px){
+  #Persona{
+    padding: 10vh 22px 20vh 22px;
+  }
+  #Persona .Col-Dynamic .Col-33{
+    width:90%
+  }
+}
+
+/* -------- #Journeymap responsivity -------- */
+@media screen and (min-width: 1201px){ /* anything ABOVE 1201px */
+  #Journeymap .Col-Dynamic{
+    width:66%;
+    max-width: 1055px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 1200px){ /* anything UNDER 1200px */
+  #Journeymap .Col-Dynamic{
+    width:75%;
+  }
+}
+@media screen and (max-width: 1080px){
+  #Journeymap .Col-Dynamic{
+    width:90%;
+  }
+}
+@media screen and (max-width: 900px){
+  #Journeymap .Col-Dynamic{
+    width:100%;
+  }
+}
+@media screen and (max-width: 825px){
+  #Journeymap .Col-Dynamic .Left-To-Right-Row{
+    flex-direction: column;
+  }
+  #Journeymap .Col-Dynamic .Col-40{
+    width:66%;
+  }
+}
+@media screen and (max-width: 600px){
+  #Journeymap .Col-Dynamic .Col-40{
+    width:80%;
+  }
+}
+@media screen and (max-width: 480px){
+  #Journeymap{
+    padding: 15vh 22px;
+  }
+  #Journeymap .Col-Dynamic .Col-40{
+    width:90%;
+  }
+}
+
+/* -------- #Current-Offerings responsivity -------- */
+@media screen and (min-width: 911px){ /* anything ABOVE 911px */
+  #Current-Offerings .Col-Dynamic{
+    width: 66%; /* sets initial width */
+    max-width: 1140px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 910px){ /* anything UNDER 910px */
+  #Current-Offerings .Col-Dynamic{
+    width: 75%; /* wider */
+  }
+}
+@media screen and (max-width: 815px){
+  #Current-Offerings .Col-Dynamic{
+    width: 90%; /* wider */
+  }
+}
+@media screen and (max-width: 700px){
+  #Current-Offerings .Col-Dynamic{
+    flex-direction: column; /* vertical layout */
+    width:100%; /* widest */
+  }
+  #Current-Offerings .Col-Dynamic .Col-40{ /* grabs text col */
+    width:60%; /* wider */
+  }
+  #Current-Offerings .Col-Dynamic .Col-60{ /* grabs image col*/
+    width:75%; /* wider */
+  }
+}
+@media screen and (max-width: 555px){
+  #Current-Offerings .Col-Dynamic .Col-40{
+    width:75%; /* wider */
+  }
+  #Current-Offerings .Col-Dynamic .Col-60{
+    width:100%; /* widest */
+  }
+}
+@media screen and (max-width: 480px){
+  #Current-Offerings{
+    padding: 15vh 22px; /* mobile padding */
+  }
+}
+@media screen and (max-width: 400px){
+  #Current-Offerings .Col-Dynamic .Col-40{
+    width:90%; /* wider */
+  }
+}
+
+/* -------- #Process responsivity -------- */
+@media screen and (min-width: 811px){ /* anything ABOVE 811px */
+  #Process .Col-Dynamic:nth-child(1){ /* grabs grid + sprint 1 text container */
+    width: 50%; /* sets initial */
+    max-width: 730px; /* max width for wide screens */
+  }
+  #Process .Col-Dynamic:nth-child(2){ /* grabs two whitebaord images and sprint 2/3 text container */
+    width: 75%; /* sets initial */
+    max-width: 940px; /* max width for wide screens */
+  }
+    #Process .Col-Dynamic:nth-child(2) .Text-Column{ /* grabs text column within second dynamic column*/
+      max-width: 375px; /* sets initial */
+    }
+}
+@media screen and (max-width: 810px){ /* anything UNDER 810px */
+  #Process .Col-Dynamic:nth-child(1){  /* grabs grid + sprint 1 text container */
+    width: 75%; /* wider */
+  }
+  #Process .Col-Dynamic:nth-child(2){ /* grabs two whitebaord images and sprint 2/3 text container */
+    width: 75%; /* wider */
+  }
+  #Process .Col-Dynamic:nth-child(2) .Text-Column{ /* grabs text column within second dynamic column*/
+    width: 75%; /* sets initial */
+  }
+}
+@media screen and (max-width: 605px){
+  #Process .Col-Dynamic:nth-child(1){  /* grabs grid + sprint 1 text container */
+    width: 100%; /* wider */
+  }
+    #Process .Col-Dynamic:nth-child(1) .Text-Column{ /* grabs text column within first dynamic column*/
+      width: 75%; /* wider */
+    }
+  #Process .Col-Dynamic:nth-child(2){ /* grabs two whitebaord images and sprint 2/3 text container */
+    width: 100%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){
+  #Process {
+    padding: 15vh 22px; /* sets mobile padding */
+  }
+  #Process .Col-Dynamic:nth-child(1) .Float-Style{ /* grabs images in grid */
+    width: calc( 50% - 4px ); /* sets width to fit two images per row in grid (down from 3) */
+  }
+  #Process .Col-Dynamic:nth-child(2){
+    width: 75%; /* thinner */
+  }
+  #Process .Col-Dynamic:nth-child(2) .Text-Column{
+    width: 100%; /* widest */
+  }
+  #Process .Col-Dynamic:nth-child(2) .Left-To-Right-Row{ /* grabs container of just the whiteboard images*/
+    flex-direction: column; /* sets vertical layout*/
+  }
+  #Process .Col-Dynamic:nth-child(2) .Left-To-Right-Row div{ /* grabs each image's container*/
+    width: 100% /* sets width to be size of row */
+  }
+}
+@media screen and (max-width: 390px){
+  #Process .Col-Dynamic:nth-child(1) .Text-Column{
+    width: 90%; /* wider */
+  }
+  #Process .Col-Dynamic:nth-child(2){
+    width: 100%; /* wider */
+  }
+  #Process .Col-Dynamic:nth-child(2) .Text-Column{
+    width: 90%; /* wider */
+  }
+}
+
+/* -------- #Iteration-My-Plan responsivity -------- */
+@media screen and (min-width: 1101px){ /* anything ABOVE 1101px */
+  #Iteration-My-Plan .Col-Dynamic:nth-child(1){ /* grabs Iteration text col */
+    width:25%; /* sets initial width */
+      max-width: 430px; /* max width for wide screens */
+  }
+  #Iteration-My-Plan .Col-Dynamic:nth-child(2), #Iteration-My-Plan .Col-Dynamic:nth-child(3), #Iteration-My-Plan .Col-Dynamic:nth-child(4), #Iteration-My-Plan .Col-Dynamic:nth-child(5){ /* dynamic columns 2-5 grabbed*/
+    width:60%; /* sets initial */
+    max-width: 775px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 1100px){ /* anything UNDER 1100px */
+  #Iteration-My-Plan .Col-Dynamic:nth-child(1){ /* grabs Iteration text col */
+    width:40%; /* wider */
+  }
+  #Iteration-My-Plan .Col-Dynamic:nth-child(2), #Iteration-My-Plan .Col-Dynamic:nth-child(3), #Iteration-My-Plan .Col-Dynamic:nth-child(4),  #Iteration-My-Plan .Col-Dynamic:nth-child(5){ /* dynamic columns 2-5 grabbed*/
+    width:75%; /* wider */
+  }
+}
+@media screen and (max-width: 760px){
+  #Iteration-My-Plan .Col-Dynamic:nth-child(1){ /* grabs Iteration text col */
+    width:60%; /* wider */
+  }
+  #Iteration-My-Plan .Col-Dynamic:nth-child(2), #Iteration-My-Plan .Col-Dynamic:nth-child(3), #Iteration-My-Plan .Col-Dynamic:nth-child(4),  #Iteration-My-Plan .Col-Dynamic:nth-child(5){ /* dynamic columns 2-5 grabbed*/
+    width:90%; /* wider */
+  }
+}
+@media screen and (max-width: 600px){
+  #Iteration-My-Plan .Col-Dynamic:nth-child(2), #Iteration-My-Plan .Col-Dynamic:nth-child(3), #Iteration-My-Plan .Col-Dynamic:nth-child(4),  #Iteration-My-Plan .Col-Dynamic:nth-child(5){ /* dynamic columns 2-5 grabbed*/
+    flex-direction: column; /* vertical layout */
+    width:100%; /* full width */
+    gap:10px; /* reduced gap */
+  }
+  #Iteration-My-Plan .Col-Dynamic .Col-40{ /* grabs all image/video container columns*/
+    width:60%; /* wider */
+  }
+  #Iteration-My-Plan .Col-Dynamic .Col-60{ /* grabs each card's container */
+    width:80%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){
+  #Iteration-My-Plan{
+    padding: 40vh 22px 15vh 32px; /* mobile padding */
+  }
+  #Iteration-My-Plan .Col-Dynamic:nth-child(1){ /* grabs Iteration text col */
+    width:75%; /* thinner */
+  }
+  #Iteration-My-Plan .Col-Dynamic .Col-40{ /* grabs all image/video container columns*/
+    width:66%; /* wider */
+  }
+  #Iteration-My-Plan .Col-Dynamic .Col-60{ /* grabs each card's container */
+    width:90%; /* wider */
+  }
+}
+@media screen and (max-width: 350px){
+  #Iteration-My-Plan .Col-Dynamic:nth-child(1){ /* grabs Iteration text col */
+    width:90%; /* wider */
+  }
+  #Iteration-My-Plan .Col-Dynamic .Col-40{ /* grabs all image/video container columns*/
+    width:75%; /* wider */
+  }
+  #Iteration-My-Plan .Col-Dynamic .Col-60{ /* grabs each card's container */
+    width:100%; /* widest */
+  }
+}
+/* -------- #Prototyping responsivity -------- */
+@media screen and (min-width: 1141px){ /* anything ABOVE 1141px */
+ #Prototyping .Col-Dynamic{
+   width: 75%; /* sets intitial width */
+   max-width: 855px; /* makes sure text and image don't get uncomfortably big */
+ }
+}
+@media screen and (max-width: 1140px){ /* anything UNDER 1140px */
+  #Prototyping .Col-Dynamic{
+    width: 75%; /* sets initial width */
+  }
+}
+@media screen and (max-width: 900px){
+  #Prototyping .Col-Dynamic{
+    width: 90%; /* sets initial width */
+  }
+    #Prototyping .Col-Dynamic .Col-25{ /* grabs containers of app logo images */
+      width: 33%;
+    }
+}
+@media screen and (max-width: 700px){
+  #Prototyping .Col-Dynamic{
+    flex-direction: column-reverse; /* revers column order for vertical stacking*/
+    width: 75%;
+  }
+    #Prototyping .Col-Dynamic .Col-50:nth-child(1){ /* grabs text and icon container*/
+      width: 100%; /* wider */
+      margin-top: 44px;
+    }
+    #Prototyping .Col-Dynamic .Col-50:nth-child(2){ /* grabs image container*/
+      width: 75%; /* wider */
+    }
+      #Prototyping .Col-Dynamic .Col-25{ /* grabs containers of app logo images */
+        width: 25%; /* thinner */
+      }
+}
+@media screen and (max-width: 550px){
+  #Prototyping .Col-Dynamic{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px){
+  #Prototyping{
+    padding: 15vh 22px 15vh 32px;
+  }
+  #Prototyping .Col-Dynamic{
+    width: 100%;
+  }
+    #Prototyping .Col-Dynamic .Col-50:nth-child(1){ /* grabs text and icon container*/
+      width: 90%; /* thinner */
+      margin-top: 44px;
+    }
+      #Prototyping .Col-Dynamic .Col-25{ /* grabs containers of app logo images */
+        width: 33%; /* wider */
+      }
+}
+@media screen and (max-width: 480px){
+  #Prototyping .Col-Dynamic .Col-50:nth-child(2){ /* grabs image container*/
+    width: 100%; /* widest */
+  }
+}
+
+/* -------- #Content-Engagement-Testing responsivity -------- */
+@media screen and (min-width: 1266px){ /* anything ABOVE 1266px */
+ #Content-Engagement-Testing .Col-Dynamic:nth-child(1){ /* grabs first dynamic container (not final interaction one)*/
+   width: 75%; /* sets initial width */
+   max-width: 1555px; /* max width for wide screens */
+ }
+ #Content-Engagement-Testing .Col-Dynamic:nth-child(2){ /* grabs final interaction container */
+   width: 40%; /* sets initial width */
+   max-width: 725px; /* max width for wide screens */
+ }
+}
+@media screen and (max-width: 1265px){ /* anything UNDER 1265px */
+ #Content-Engagement-Testing .Col-Dynamic:nth-child(1){ /* grabs first dynamic container (not final interaction one)*/
+   width: 90%; /* wider */
+ }
+ #Content-Engagement-Testing .Col-Dynamic:nth-child(2){ /* grabs final interaction container */
+   width: 50%; /* wider */
+ }
+}
+@media screen and (max-width: 1100px){
+ #Content-Engagement-Testing .Col-Dynamic:nth-child(1){ /* grabs first dynamic container (not final interaction one)*/
+   width: 100%; /* widest */
+ }
+}
+@media screen and (max-width: 1000px){
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-33{ /* grabs text column within dynamic column */
+    width:40%; /* wider */
+  }
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-66{ /* grabs image row within dynamic column */
+    width: 60%; /* thinner */
+  }
+}
+@media screen and (max-width: 850px){
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1){ /* grabs first dynamic container (not final interaction one)*/
+    flex-direction: column-reverse; /* Vertical arrangement for space */
+  }
+    #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-33{ /* grabs text column within dynamic column */
+      width:50%; /* wider */
+    }
+    #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-66{ /* grabs image row within dynamic column */
+      width: 75%; /* wider */
+      margin-bottom: 44px; /* adds spacing to account for drop shadow */
+    }
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(2){ /* grabs final interaction container */
+    width: 66%; /* wider */
+  }
+}
+@media screen and (max-width: 660px){
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-33{ /* grabs text column within dynamic column */
+    width:66%; /* wider */
+  }
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-66{ /* grabs image row within dynamic column */
+    width: 90%; /* wider */
+    margin-bottom: 44px; /* adds spacing to account for drop shadow */
+  }
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(2){ /* grabs final interaction container */
+    width: 75%; /* wider */
+  }
+}
+@media screen and (max-width: 660px){
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-33{ /* grabs text column within dynamic column */
+    width:75%; /* wider */
+  }
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-66{ /* grabs image row within dynamic column */
+    width: 100%; /* widest */
+    margin-bottom: 44px; /* adds spacing to account for drop shadow */
+  }
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(2){ /* grabs final interaction container */
+    width: 90%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){
+  #Content-Engagement-Testing{
+    padding: 15vh 22px 15vh 22px; /* mobile padding*/
+  }
+    #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-33{ /* grabs text column within dynamic column */
+      width:90%; /* wider */
+    }
+    #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-66{ /* grabs image row within dynamic column */
+      flex-direction: column; /* vertical orientation for small screens*/
+      width: 50%; /* thinner */
+      gap: 66px /* wider gap needed to make which text and image belong together clear */
+    }
+      #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-66 .Top-To-Bottom-Column-Centered{
+        flex-direction: column-reverse; /* vertical orientation for small screens*/
+      }
+    #Content-Engagement-Testing .Col-Dynamic:nth-child(2){ /* grabs final interaction container */
+      flex-direction: column-reverse;
+      width: 100%; /* widest */
+    }
+      #Content-Engagement-Testing .Col-Dynamic:nth-child(2) .Col-50{ /* grabs containers within 2nd dynamic column */
+        width: 66%; /* wider */
+        align-items: center; /* centers text under the image*/
+      }
+}
+@media screen and (max-width: 350px){
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(1) .Col-66{ /* grabs image row within dynamic column */
+    width: 66%; /* wider */
+  }
+  #Content-Engagement-Testing .Col-Dynamic:nth-child(2) .Col-50{ /* grabs containers within 2nd dynamic column */
+    width: 80%; /* wider */
+    align-items: center; /* centers text under the image*/
+  }
+}
+
+/* -------- #Motion-Design responsivity -------- */
+@media screen and (min-width: 1251px){ /* anything ABOVE 1251px */
+  #Motion-Design .Col-Dynamic{
+    Width:50%; /* sets initial */
+    max-width: 815px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 1250px){ /* anything UNDER 1250px */
+  #Motion-Design .Col-Dynamic{
+    Width:66%; /* wider */
+  }
+}
+@media screen and (max-width: 970px){
+  #Motion-Design .Col-Dynamic{
+    Width:75%; /* wider */
+  }
+}
+@media screen and (max-width: 865px){
+  #Motion-Design .Col-Dynamic{
+    Width:90%; /* wider */
+  }
+}
+@media screen and (max-width: 700px){
+  #Motion-Design .Col-Dynamic{
+    Width:100%; /* widest */
+  }
+    #Motion-Design .Col-Dynamic .Col-60{ /* grabs text container */
+      Width:50%; /* thinner */
+    }
+    #Motion-Design .Col-Dynamic .Col-40{ /* grabs text image figure container */
+      Width:50%; /* wider */
+    }
+}
+@media screen and (max-width: 580px){
+  #Motion-Design .Col-Dynamic{
+    flex-direction: column; /* vertical stack */
+    gap: 88px; /* larger gap for vertical spacing */
+  }
+    #Motion-Design .Col-Dynamic .Col-60{ /* grabs text container */
+      Width:80%; /* wider */
+    }
+    #Motion-Design .Col-Dynamic .Col-40{ /* grabs text image figure container */
+      Width:50%; /* wider */
+    }
+}
+@media screen and (max-width: 480px){
+  #Motion-Design {
+    padding: 15vh 22px; /* mobile padding */
+  }
+    #Motion-Design .Col-Dynamic{
+      flex-direction: column; /* vertical stack */
+      gap: 66px; /* thinner */
+    }
+      #Motion-Design .Col-Dynamic .Col-60{ /* grabs text container */
+        Width:90%; /* wider */
+      }
+      #Motion-Design .Col-Dynamic .Col-40{ /* grabs text image figure container */
+        Width:66%; /* wider */
+      }
+}
+@media screen and (max-width: 350px){
+  #Motion-Design .Col-Dynamic .Col-40{ /* grabs text image figure container */
+    Width:80%; /* wider */
+  }
+}
+
+/* -------- #Final-Interface responsivity -------- */
+@media screen and (min-width: 1061px){ /* anything ABOVE 1061px */
+  #Final-Interface .Col-Dynamic:nth-child(1){ /* Grabs the video container */
+    width: 60%; /* Sets initial */
+    max-width: 960px; /* max width for wide screens */
+  }
+  #Final-Interface .Col-Dynamic:nth-child(2){ /* Grabs the mockup and text row container */
+    width: 66%; /* Sets initial */
+    max-width: 960px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 1060px){ /* anything UNDER 1060px */
+  #Final-Interface .Col-Dynamic:nth-child(1){ /* Grabs the video container */
+    width: 60%; /* Sets initial */
+  }
+  #Final-Interface .Col-Dynamic:nth-child(2){ /* Grabs the mockup and text row container */
+    width: 75%; /* wider */
+  }
+    #Final-Interface .Col-Dynamic:nth-child(2) h1{ /* Grabs title WITHIN mockup and text row container */
+      font-size: 10vw; /* variable font size */
+      line-height: 10vw; /* variable line height */
+    }
+    #Final-Interface .Col-Dynamic:nth-child(2) h3{ /* Grabs title WITHIN mockup and text row container */
+      font-size: 1.73vw; /* variable font size */
+      line-height: 2.3vw; /* variable line height */
+    }
+}
+@media screen and (max-width: 750px){
+  #Final-Interface .Col-Dynamic:nth-child(1){ /* Grabs the video container */
+    width: 75%; /* wider */
+  }
+  #Final-Interface .Col-Dynamic:nth-child(2){ /* Grabs the mockup and text row container */
+    width: 90%; /* wider */
+  }
+}
+@media screen and (max-width: 620px){
+  #Final-Interface .Col-Dynamic:nth-child(1){ /* Grabs the video container */
+    width: 90%; /* wider */
+  }
+}
+@media screen and (max-width: 585px){
+  #Final-Interface .Col-Dynamic:nth-child(1){ /* Grabs the video container */
+    width: 100%; /* wider */
+  }
+  #Final-Interface .Col-Dynamic:nth-child(2){ /* Grabs the mockup and text row container */
+    flex-direction: column-reverse; /* vertical stack */
+    width: 100%; /* widest */
+  }
+  #Final-Interface .Col-Dynamic:nth-child(2) .Top-To-Bottom-Column:nth-child(1){ /* Grabs the mockup container within the second dynamic container */
+    width:60%;
+  }
+  #Final-Interface .Col-Dynamic:nth-child(2) h1{ /* Grabs title WITHIN mockup and text row container */
+    font-size: 18vw; /* larger variable size*/
+    line-height: 18vw; /* larger variable line height */
+  }
+  #Final-Interface .Col-Dynamic:nth-child(2) h3{ /* Grabs title WITHIN mockup and text row container */
+    font-size: 3.1vw; /* larger variable size*/
+    line-height: 4.15vw; /* larger variable line height */
+  }
+}
+@media screen and (max-width: 480px){
+  #Final-Interface {
+    padding: 10vh 22px; /* mobile padding */
+  }
+    #Final-Interface .Col-Dynamic:nth-child(2) .Top-To-Bottom-Column:nth-child(1){ /* Grabs the mockup container within the second dynamic container */
+      width:75%; /* wider */
+    }
+}
+
+/* -------- #Reflective-Content responsivity -------- */
+@media screen and (min-width: 901px){ /* anything ABOVE 901px */
+  #Reflective-Content .Col-Dynamic{
+    width: 60%; /* sets initial */
+    max-width: 845px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 900px){ /* anything UNDER 900px */
+  #Reflective-Content .Col-Dynamic{
+    width: 75%; /* wider */
+  }
+}
+@media screen and (max-width: 745px){
+  #Reflective-Content .Col-Dynamic{
+    width: 90%; /* wider */
+  }
+}
+@media screen and (max-width: 630px){
+  #Reflective-Content .Col-Dynamic{
+    width: 100%; /* widest */
+  }
+}
+@media screen and (max-width: 580px){
+  #Reflective-Content .Col-Dynamic{
+    flex-direction: column-reverse; /* vertical stack with text first */
+    gap: 66px; /* slightly larger gap for vertical stacking */
+  }
+    #Reflective-Content .Col-Dynamic .Col-40{ /* grabs image container within dynamic column */
+      width: 50%; /* wider */
+    }
+    #Reflective-Content .Col-Dynamic .Col-60{ /* grabs image container within dynamic column */
+      width: 75%; /* wider */
+    }
+}
+@media screen and (max-width: 480px){
+  #Reflective-Content{
+    padding: 15vh 22px; /* mobile padding */
+  }
+    #Reflective-Content .Col-Dynamic .Col-60{ /* grabs image container within dynamic column */
+      width: 90%; /* wider */
+    }
+}
+@media screen and (max-width: 400px){
+  #Reflective-Content .Col-Dynamic .Col-40{ /* grabs image container within dynamic column */
+    width: 66%; /* wider */
+  }
+}
+
+/* -------- #Plan-Growth responsivity -------- */
+@media screen and (min-width: 951px){ /* anything ABOVE 951px */
+  #Plan-Growth .Col-Dynamic {
+    width: 75%; /* sets initial */
+    max-width: 1150px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 950px){ /* anything UNDER 950px */
+  #Plan-Growth .Col-Dynamic {
+    width: 90%; /* wider */
+  }
+}
+@media screen and (max-width: 810px){
+  #Plan-Growth .Col-Dynamic {
+    width: 100%; /* widest */
+  }
+}
+@media screen and (max-width: 735px){
+  #Plan-Growth .Col-Dynamic {
+    flex-direction: column; /* stacking vertically */
+    gap: 44px; /* l;arger gap for vertical stack */
+  }
+    #Plan-Growth .Col-Dynamic .Col-40{ /* grabs text container*/
+      width:60%; /* wider */
+    }
+    #Plan-Growth .Col-Dynamic .Col-60{ /* grabs mockups container*/
+      width:75%; /* wider */
+    }
+}
+@media screen and (max-width: 600px){
+  #Plan-Growth .Col-Dynamic .Col-40{ /* grabs text container*/
+    width:66%; /* wider */
+  }
+  #Plan-Growth .Col-Dynamic .Col-60{ /* grabs mockups container*/
+    width:90%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){
+  #Plan-Growth{
+    padding: 15vh 22px; /* mobile padding */
+  }
+  #Plan-Growth .Col-Dynamic .Col-40{ /* grabs text container*/
+    width:75%; /* wider */
+  }
+  #Plan-Growth .Col-Dynamic .Col-60{ /* grabs mockups container*/
+    width:100%; /* wider */
+    gap: 16px; /* smaller gap for smaller screens */
+  }
+}
+@media screen and (max-width: 375px){
+  #Plan-Growth .Col-Dynamic .Col-40{ /* grabs text container*/
+    width:90%; /* wider */
+  }
+}
+
+/* -------- #Privacy responsivity -------- */
+@media screen and (min-width: 1146px){ /* anything ABOVE 1146px */
+  #Privacy .Col-Dynamic {
+    width: 50%; /* sets initial */
+    max-width: 800px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 1145px){ /* anything UNDER 1145px */
+  #Privacy .Col-Dynamic {
+    width: 66%; /* wider */
+  }
+}
+@media screen and (max-width: 885px){
+  #Privacy .Col-Dynamic {
+    width: 75%; /* wider */
+  }
+}
+@media screen and (max-width: 790px){
+  #Privacy .Col-Dynamic {
+    width: 85%; /* wider */
+  }
+    #Privacy .Col-Dynamic .Col-60{ /* Grabs the text column container WITHIN the dynamic column*/
+      width: 50%; /* thinner */
+    }
+    #Privacy .Col-Dynamic .Col-40{ /* Grabs the mockup container WITHIN the dynamic column*/
+      width: 50%; /* wider */
+    }
+}
+@media screen and (max-width: 685px){
+  #Privacy .Col-Dynamic {
+    width: 100%; /* widest */
+  }
+}
+@media screen and (max-width: 600px){
+  #Privacy .Col-Dynamic {
+    flex-direction: column; /* vetically stacks items */
+  }
+  #Privacy .Col-Dynamic .Col-60{ /* Grabs the text column container WITHIN the dynamic column*/
+    width: 66%; /* wider */
+  }
+  #Privacy .Col-Dynamic .Col-40{ /* Grabs the mockup container WITHIN the dynamic column*/
+    width: 40%; /* thinner */
+  }
+}
+@media screen and (max-width: 515px){
+  #Privacy .Col-Dynamic .Col-60{ /* Grabs the text column container WITHIN the dynamic column*/
+    width: 80%; /* wider */
+  }
+  #Privacy .Col-Dynamic .Col-40{ /* Grabs the mockup container WITHIN the dynamic column*/
+    width: 50%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){
+  #Privacy {
+    padding: 10vh 22px;
+  }
+}
+@media screen and (max-width: 415px){
+  #Privacy .Col-Dynamic .Col-60{ /* Grabs the text column container WITHIN the dynamic column*/
+    width: 90%; /* wider */
+  }
+  #Privacy .Col-Dynamic .Col-40{ /* Grabs the mockup container WITHIN the dynamic column*/
+    width: 60%; /* wider */
+  }
+}
+
+/* -------- #Next-Steps responsivity -------- */
+@media screen and (min-width: 981px){ /* anything ABOVE 981px */
+  #Next-Steps .Col-Dynamic{
+    width: 33%; /* sets initial */
+    max-width: 465px; /* max width for wide screens */
+  }
+}
+@media screen and (max-width: 980px){ /* anything UNDER 980px */
+  #Next-Steps .Col-Dynamic{
+    width: 40%; /* wider */
+  }
+}
+@media screen and (max-width: 895px){ /* anything UNDER 980px */
+  #Next-Steps .Col-Dynamic{
+    width: 50%; /* wider */
+  }
+}
+@media screen and (max-width: 735px){ /* anything UNDER 980px */
+  #Next-Steps .Col-Dynamic{
+    width: 66%; /* wider */
+  }
+}
+@media screen and (max-width: 580px){ /* anything UNDER 980px */
+  #Next-Steps .Col-Dynamic{
+    width: 80%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){ /* anything UNDER 980px */
+  #Next-Steps {
+    padding: 20vh 22px; /* mobile padding */
+  }
+    #Next-Steps .Col-Dynamic{
+      width: 90%; /* wider */
+    }
+      #Next-Steps .Col-Dynamic .Col-60{ /* grabs image */
+        width: 50%; /* thinner */
+      }
+}
+
+/* -------- #Learning responsivity -------- */
+@media screen and (min-width: 901px){ /* anything ABOVE 901px */
+  #Learning .Col-Dynamic:nth-child(1){ /* grabs text column container */
+    width: 40%; /* sets initial */
+    max-width: 455px; /* max width for wide displays*/
+  }
+  #Learning .Col-Dynamic:nth-child(2){ /* grabs image figure container */
+    width: 75%; /* sets initial */
+    max-width: 855px; /* max width for wide displays*/
+  }
+}
+@media screen and (max-width: 900px){ /* anything UNDER 900px */
+  #Learning .Col-Dynamic:nth-child(1){ /* grabs text column container */
+    width: 60%; /* wider */
+  }
+  #Learning .Col-Dynamic:nth-child(2){ /* grabs image figure container */
+    width: 80%; /* wider */
+  }
+}
+@media screen and (max-width: 635px){
+  #Learning .Col-Dynamic:nth-child(1){ /* grabs text column container */
+    width: 80%; /* wider */
+  }
+  #Learning .Col-Dynamic:nth-child(2){ /* grabs image figure container */
+    width: 100%; /* wider */
+  }
+}
+@media screen and (max-width: 480px){
+  #Learning{
+    padding: 15vh 22px;
+  }
+  #Learning .Col-Dynamic:nth-child(1){ /* grabs text column container */
+    width: 90%; /* wider */
+  }
 }

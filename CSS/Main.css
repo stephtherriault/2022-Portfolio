@@ -352,7 +352,7 @@ img, video{
   height: auto;
   border-radius: 12px;
   vertical-align:middle; /*removes annoying 3px default bottom margin */
-  content-visibility: auto;
+  content-visibility: visible;
   contain-intrinsic-size: auto;
 }
 img.Float-Style, video.Float-Style{
@@ -362,6 +362,9 @@ img.Card-Style, video.Card-Style{
   background-color: #FFFFFF;
   border: 6px solid #31180A;
   border-radius: 16px;
+}
+.Image-Loaded{
+  content-visibility: visible;
 }
 
 .Iframe-Container{
@@ -592,7 +595,7 @@ a .Card-In.Entered-Screen:active, a.Card-In.Entered-Screen:active{
 }
 @media screen and (max-width: 480px){
   #Steph-Therriault-Intro{
-    padding: 0px 32px 0px; /* applies new padding for no clipper on mobile*/
+    padding: 0px 22px 0px 32px; /* applies new padding for no clipper on mobile*/
     margin: 15vh 0 20vh; /* new top margin for mobile */
   }
   #Steph-Therriault-Intro .Intro-Text{ /* grabs special h2 used for intro */
@@ -621,6 +624,7 @@ a .Card-In.Entered-Screen:active, a.Card-In.Entered-Screen:active{
 @media screen and (min-width: 1101px){ /* anything OVER 1101px*/
   #Case-Study-Previews .Col-Dynamic{ /* both dynamic columns */
     width: 50%; /* initial width */
+    max-width: 700px; /* max width for wide screens */
   }
 }
 @media screen and (max-width: 1100px){ /* anything UNDER 1100px*/
@@ -646,7 +650,7 @@ a .Card-In.Entered-Screen:active, a.Card-In.Entered-Screen:active{
 }
 @media screen and (max-width: 480px){
   #Case-Study-Previews{
-    padding: 50px 32px 66px; /* adjusts padding for new margins */
+    padding: 50px 22px 66px 32px; /* adjusts padding for new margins */
   }
   #Case-Study-Previews .Col-Dynamic:nth-child(2){
     flex-wrap: nowrap; /* back to one full row*/
@@ -682,6 +686,7 @@ a .Card-In.Entered-Screen:active, a.Card-In.Entered-Screen:active{
 @media screen and (min-width: 966px){ /* anything OVER 966px*/
  article .Col-Dynamic{ /* grabs dynamic columns from all articles*/
    width: 75%; /* sets initial width */
+   max-width: 1150px; /* max width for wide screens */
  }
 }
 @media screen and (max-width: 1100px){ /* anything UNDER 1100px*/
@@ -725,7 +730,7 @@ article .Col-Dynamic .Col-60{ /* grabs the container parent of the image card*/
 }
 @media screen and (max-width: 480px){
  #Haven, #Flowpub { /* have to specify, or other css overwrites padding */
-   padding: 20vh 32px 30vh; /* sets appropriate margins for mobile screens */
+    padding: 20vh 22px 30vh 32px; /* sets appropriate margins for mobile screens */
  }
  article .Col-Dynamic .Col-60 img{ /* grabs the splash image */
    margin-top: 4px; /* lessens top margin */
@@ -744,5 +749,34 @@ article .Col-Dynamic .Col-60{ /* grabs the container parent of the image card*/
 @media screen and (max-width: 365px){
   article .Col-Dynamic .Button{
      width: min-content; /* this is mainly for flowpub button "Request Access" as it reflows to be two lines */
+  }
+}
+
+/* -------- #Get-In-Touch responsivity -------- */
+@media screen and (min-width: 1126px){ /* when screen ABOVE 1126px wide */
+  #Get-In-Touch .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 40%; /* Initial width*/
+    max-width: 475px;
+  }
+}
+@media screen and (max-width: 1125px){
+  #Get-In-Touch .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 66%; /* Slightly wider */
+      max-width: none;
+  }
+}
+@media screen and (max-width: 745px){
+  #Get-In-Touch .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 80%; /* Slightly wider */
+  }
+}
+@media screen and (max-width: 600px){
+  #Get-In-Touch .Col-Dynamic{ /* grabs Dynamic Container column */
+    width: 100%; /* full width */
+  }
+}
+@media screen and (max-width: 480px){
+  #Get-In-Touch { /* grabs entire section */
+    padding: 20vh 22px 30vh 32px; /* sets appropriate margins for mobile screens */
   }
 }

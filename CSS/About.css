@@ -72,6 +72,7 @@ h2{
   #About .Col-Dynamic{
     width: 60%; /*Sets default width of container of about page text and image*/
     min-width: 744px;  /*locks size at smallest width until next breakpoint*/
+    max-width: 1120px; /* max width for wide screens */
   }
 }
 @media screen and (max-width: 830px){
@@ -127,6 +128,7 @@ h2{
 @media screen and (min-width: 1126px){ /* when screen ABOVE 976px wide */
   #Contact .Col-Dynamic{ /* grabs Dynamic Container column */
     width: 33%; /* Initial width*/
+    max-width: 475px;
   }
 }
 @media screen and (max-width: 1125px){
@@ -145,7 +147,11 @@ h2{
   }
 }
 @media screen and (max-width: 480px){
+  #Contact{
+    padding-left: 32px;
+    padding-right: 22px;
+  }
   #Contact .Col-Dynamic{ /* grabs Dynamic Container column */
-    width: calc(100% - 44px); /* as wide as screen minus two 22px margins */
+    width: 100%;
   }
 }

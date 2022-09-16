@@ -16,9 +16,15 @@
   <!-- Lets the chrome dev tool recognize media queries: -->
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <!-- Add Favicon -->
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="Assets/Favicon.svg">
+  <link rel="mask-icon" href="Assets/Favicon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="Assets/Apple-Touch-Icon.png">
+  <link rel="manifest" href="manifest.json">
+  <!-- Linking CSS -->
   <link href="CSS/Fonts.css" rel="stylesheet">
-  <link href="CSS/Flexbox.css" rel="stylesheet">
   <link href="CSS/Main.css" rel="stylesheet">
+  <link href="CSS/Flexbox.css" rel="stylesheet">
   <link href="CSS/Haven-Article.css" rel="stylesheet">
   <!-- importing fonts here makes loading faster -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,75 +53,74 @@
   </nav>
 
   <section id="Context">
-    <div class="Haven-Header Top-To-Bottom-Column">
-      <div class="Col-33">
-        <div class="Haven-Header-BG-Stack">
-          <img srcset="Assets/Haven/Haven-Splash-720w.png 720w,
-                    Assets/Haven/Haven-Splash-360w.png 360w,
-                    Assets/Haven/Haven-Splash-180w.png 180w"
-             sizes="(max-width:600px) 100vw 600px"
-             src="Assets/Haven/Haven-Splash-720w.png"
-             loading="lazy"
-             decoding="async"
-             alt="A myriad of illustrated faces cascade vertically. Every cool-toned face is friendly, calm, and a little bit flirty">
-          <img srcset="Assets/Haven/Haven-Splash-720w.png 720w,
-                     Assets/Haven/Haven-Splash-360w.png 360w,
-                     Assets/Haven/Haven-Splash-180w.png 180w"
-              sizes="(max-width:600px) 100vw 600px"
-              src="Assets/Haven/Haven-Splash-720w.png"
-              loading="lazy"
-              decoding="async"
-              alt="A myriad of illustrated faces cascade vertically. Every cool-toned face is friendly, calm, and a little bit flirty">
-        </div>
-      </div>
-      <div class="Haven-Header-Mockup-Stack Left-To-Right-Row Col-33 On-Screen-Target-For-Child-Simple-Ins">
-        <div class="Mockup-Wrapper Simple-In">
-          <img srcset="Assets/Haven/Mockup-Safe-Steps-1920w.png 1920w,
-                    Assets/Haven/Mockup-Safe-Steps-1080w.png 1080w,
-                    Assets/Haven/Mockup-Safe-Steps-720w.png 720w,
-                    Assets/Haven/Mockup-Safe-Steps-360w.png 360w"
-             sizes="(max-width:600px) 100vw 600px"
-             src="Assets/Haven/Mockup-Safe-Steps-1920w.png"
-             loading="lazy"
-             decoding="async"
-             alt="The module 'Taking safe steps' is mocked up to show 4 sub-activities and a lively orange illustration of a person looking curiously at footprints">
-        </div>
-        <div class="Mockup-Wrapper">
-          <img srcset="Assets/Haven/Mockup-My-Guide-1920w.png 1920w,
-                    Assets/Haven/Mockup-My-Guide-1080w.png 1080w,
-                    Assets/Haven/Mockup-My-Guide-720w.png 720w,
-                    Assets/Haven/Mockup-My-Guide-360w.png 360w"
-             sizes="(max-width:600px) 100vw 600px"
-             src="Assets/Haven/Mockup-My-Guide-1920w.png"
-             loading="lazy"
-             decoding="async"
-             alt="A mockup of My Guide, a screen within Haven that organizes content into a vertical column of colourful illustrated cards like 'Understanding me - learning how to identify myself,' and 'Taking safe steps - ensuring my safety and confidentiality.'">
-        </div>
-        <div class="Mockup-Wrapper Simple-In">
-          <img srcset="Assets/Haven/Mockup-My-Plan-Partial-1920w.png 1920w,
-                    Assets/Haven/Mockup-My-Plan-Partial-1080w.png 1080w,
-                    Assets/Haven/Mockup-My-Plan-Partial-720w.png 720w,
-                    Assets/Haven/Mockup-My-Plan-Partial-360w.png 360w"
-             sizes="(max-width:600px) 100vw 600px"
-             src="Assets/Haven/Mockup-My-Plan-Partial-1920w.png"
-             loading="lazy"
-             decoding="async"
-             alt="A mockup of My Guide, a screen within Haven that organizes content into a vertical column of colourful illustrated cards like 'Understanding me - learning how to identify myself,' and 'Taking safe steps - ensuring my safety and confidentiality.'">
-        </div>
-      </div>
-    </div>
     <div class="Left-To-Right-Row">
-      <div class="Bottom-To-Top-Column Col-25">
+      <div class="Bottom-To-Top-Column Col-Dynamic">
+        <!-- Empty column for space -->
       </div>
-      <div class="Top-To-Bottom-Column Col-50">
+      <div class="Top-To-Bottom-Column-Centered Col-Dynamic">
+        <div class="Haven-Header Top-To-Bottom-Column">
+          <div class="Haven-Header-BG-Stack">
+            <img srcset="Assets/Haven/Haven-Splash-720w.png 720w,
+                      Assets/Haven/Haven-Splash-360w.png 360w,
+                      Assets/Haven/Haven-Splash-180w.png 180w"
+               sizes="(max-width:600px) 100vw 600px"
+               src="Assets/Haven/Haven-Splash-720w.png"
+               loading="lazy"
+               decoding="async"
+               alt="A myriad of illustrated faces cascade vertically. Every cool-toned face is friendly, calm, and a little bit flirty">
+            <img srcset="Assets/Haven/Haven-Splash-720w.png 720w,
+                       Assets/Haven/Haven-Splash-360w.png 360w,
+                       Assets/Haven/Haven-Splash-180w.png 180w"
+                sizes="(max-width:600px) 100vw 600px"
+                src="Assets/Haven/Haven-Splash-720w.png"
+                loading="lazy"
+                decoding="async"
+                alt="A myriad of illustrated faces cascade vertically. Every cool-toned face is friendly, calm, and a little bit flirty">
+          </div>
+          <div class="Haven-Header-Mockup-Stack Left-To-Right-Row Col-100 On-Screen-Target-For-Child-Simple-Ins">
+            <div class="Mockup-Wrapper Simple-In">
+              <img srcset="Assets/Haven/Mockup-Safe-Steps-1920w.png 1920w,
+                        Assets/Haven/Mockup-Safe-Steps-1080w.png 1080w,
+                        Assets/Haven/Mockup-Safe-Steps-720w.png 720w,
+                        Assets/Haven/Mockup-Safe-Steps-360w.png 360w"
+                 sizes="(max-width:600px) 100vw 600px"
+                 src="Assets/Haven/Mockup-Safe-Steps-1920w.png"
+                 loading="lazy"
+                 decoding="async"
+                 alt="The module 'Taking safe steps' is mocked up to show 4 sub-activities and a lively orange illustration of a person looking curiously at footprints">
+            </div>
+            <div class="Mockup-Wrapper">
+              <img srcset="Assets/Haven/Mockup-My-Guide-1920w.png 1920w,
+                        Assets/Haven/Mockup-My-Guide-1080w.png 1080w,
+                        Assets/Haven/Mockup-My-Guide-720w.png 720w,
+                        Assets/Haven/Mockup-My-Guide-360w.png 360w"
+                 sizes="(max-width:600px) 100vw 600px"
+                 src="Assets/Haven/Mockup-My-Guide-1920w.png"
+                 loading="lazy"
+                 decoding="async"
+                 alt="A mockup of My Guide, a screen within Haven that organizes content into a vertical column of colourful illustrated cards like 'Understanding me - learning how to identify myself,' and 'Taking safe steps - ensuring my safety and confidentiality.'">
+            </div>
+            <div class="Mockup-Wrapper Simple-In">
+              <img srcset="Assets/Haven/Mockup-My-Plan-Partial-1920w.png 1920w,
+                        Assets/Haven/Mockup-My-Plan-Partial-1080w.png 1080w,
+                        Assets/Haven/Mockup-My-Plan-Partial-720w.png 720w,
+                        Assets/Haven/Mockup-My-Plan-Partial-360w.png 360w"
+                 sizes="(max-width:600px) 100vw 600px"
+                 src="Assets/Haven/Mockup-My-Plan-Partial-1920w.png"
+                 loading="lazy"
+                 decoding="async"
+                 alt="A mockup of My Guide, a screen within Haven that organizes content into a vertical column of colourful illustrated cards like 'Understanding me - learning how to identify myself,' and 'Taking safe steps - ensuring my safety and confidentiality.'">
+            </div>
+          </div>
+        </div>
         <div class="Top-To-Bottom-Column Article-Title-Column">
           <h1 class="Article-Title">Haven</h1>
           <h3>A safe space to gather your thoughts</h3>
         </div>
         <p>Haven is a speculative app for <b> LGBTQ+ youth to build their critical thinking skills, support systems, and situational awareness </b> as they plan to come out. The prototype was created as part of a senior-level interface design course at SFU’s SIAT design school. In the first meeting of this 8 week project, I challenged my team to decide on a meaningful audience before searching for market justifications. The team agreed on the LGBTQ+ community, and Haven was born.</p>
       </div>
-      <div class="Bottom-To-Top-Column Col-25 Context-Summary">
-        <div class="Bottom-To-Top-Column Col-50">
+      <div class="Bottom-To-Top-Column Col-Dynamic Context-Summary">
+        <div class="Bottom-To-Top-Column">
           <div>
             <h3>Role</h3>
             <ul>
@@ -144,28 +149,27 @@
     </div>
   </section>
   <section id="The-Problem" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-75">
-      <div class="Top-To-Bottom-Column Col-50 Light-Text">
-        <!-- IDK how to do the circle yet, but it goes here-->
-        <div class="Pie-Chart Simple-In On-Screen-Target-For-Child-Simple-Ins Animation-Delay-0-0">
-        </div>
-        <div class="Top-To-Bottom-Column Text-Column Light-Text">
+    <div class="Top-To-Bottom-Column Col-Dynamic">
+      <div class="Left-To-Right-Row Light-Text">
+        <div class="Top-To-Bottom-Column Col-50 Text-Column Light-Text">
           <div class="Paragraph-Title-Stack">
             <h4>the problem</h4>
             <h2>94% of unhoused youth are LGBTQ+</h2>
           </div>
           <p>Queer youth face significant physical and mental health crises due to the lack of familial acceptance. <a href="https://williamsinstitute.law.ucla.edu/publications/serving-our-youth-lgbtq/?fbclid=IwAR2JcDvQCg2btfw3aiVbevcgm0fMIhmmzUzs1Z9_1l_GG0jYaqcAIASFZiY">According to the UCLA,</a> LGBTQ+ youth make up more than a third of all unhoused people, with 46% of them having left home due to family rejection.</p>
+        </div>
+        <div class="Pie-Chart Simple-In On-Screen-Target-For-Child-Simple-Ins Animation-Delay-0-0">
+        </div>
       </div>
-      </div>
-      <div class="Top-To-Bottom-Column Col-50 On-Screen-Target-For-Child-Cards">
+      <div class="Left-To-Right-Row On-Screen-Target-For-Child-Cards">
         <div class="Preview-Card-Large Card-In Animation-Delay-0-0">
           <div class="Preview-Card-Header">
-            <h4>Feeling the need to prepare</h4>
+            <h4>The need to prepare</h4>
           </div>
           <div class="Preview-Card-Content">
             <p>“Preparing to come out is one of the most stressful experiences I have gone through... [there’s this] fear of being ostracized” </p>
             <div class="Right-To-Left-Row">
-              <p> — Eugene Lee Yang, Why I’m coming out as gay (2019)</p>
+              <p> — Eugene Lee Yang, Why I’m coming out as gay</p>
             </div>
           </div>
         </div>
@@ -176,18 +180,18 @@
           <div class="Preview-Card-Content">
             <p>“I would think about coming out [to my parents] in the shower... it was too much to keep in my head, but I didn’t have somewhere I felt safe putting it.”</p>
             <div class="Right-To-Left-Row">
-              <p> — Coming out interviewee</p>
+              <p> — Interviewee</p>
             </div>
           </div>
         </div>
         <div class="Preview-Card-Large Card-In Animation-Delay-0-1">
           <div class="Preview-Card-Header">
-            <h4>Coming out is continuous process</h4>
+            <h4>Coming out is continuous</h4>
           </div>
           <div class="Preview-Card-Content">
             <p>“Not everyone will react the same and you never come out once. The first time is the scariest but from then you may have to come out to new friends or distant family members.”</p>
             <div class="Right-To-Left-Row">
-              <p> — Coming out survey response</p>
+              <p> — Survey response</p>
             </div>
           </div>
         </div>
@@ -195,12 +199,12 @@
     </div>
   </section>
   <section id="Persona" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-75 On-Screen-Target-For-Child-Simple-Ins">
-      <div class="Top-To-Bottom-Column Text-Column Col-25">
+    <div class="Left-To-Right-Row Col-Dynamic">
+      <div class="Top-To-Bottom-Column Text-Column Col-33">
         <h2>Persona</h2>
         <p>This apprehensive teen wants to live openly as bisexual, but is afraid of what their situation might be if they get outed to some of their family. As my team combined research and personal experiences to create this persona, I leveraged my experience working with parents and children to inform their fears about privacy, both physical and digital. </p>
       </div>
-      <div class="Top-To-Bottom-Column Col-75">
+      <div class="Top-To-Bottom-Column Col-66">
         <img class="Float-Style"
             srcset="Assets/Haven/Persona-1920w.png 1920w,
                   Assets/Haven/Persona-720w.png 720w,
@@ -214,7 +218,7 @@
     </div>
   </section>
   <section id="Journeymap" class="Top-To-Bottom-Column-Centered">
-    <div class="Top-To-Bottom-Column Col-66">
+    <div class="Top-To-Bottom-Column Col-Dynamic">
       <div class="Left-To-Right-Row">
         <div class="Top-To-Bottom-Column Text-Column Col-40">
           <div class="Paragraph-Title-Stack">
@@ -250,7 +254,7 @@
     </div>
   </section>
   <section id="Current-Offerings" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-66">
+    <div class="Left-To-Right-Row Col-Dynamic">
       <div class="Top-To-Bottom-Column Text-Column Col-40">
         <h2>Current offerings</h2>
         <p>During research, we found many great offerings from <a href="https://www.thetrevorproject.org/wp-content/uploads/2017/09/ComingOutAsYou.pdf">The Trevor Project,</a> <a href="https://pflag.org/tags/comingout">PFlag,</a> and <a href="https://www.hrc.org/resources/coming-out-resource-guides">The Human Rights Center,</a> but I felt they all could better engage a younger demographic with a mobile-first approach.</p>
@@ -272,7 +276,7 @@
     </div>
   </section>
   <section id="Process" class="Top-To-Bottom-Column-Centered">
-    <div class="Top-To-Bottom-Column Col-50">
+    <div class="Top-To-Bottom-Column Col-Dynamic">
       <h2>Process</h2>
       <div class="Left-To-Right-Grid">
         <img class="Float-Style"
@@ -337,56 +341,50 @@
         </div>
       </div>
     </div>
-    <div class="Left-To-Right-Row Col-75">
-      <div class="Top-To-Bottom-Column Text-Column Col-33">
+    <div class="Top-To-Bottom-Column-Centered Col-Dynamic">
+      <div class="Left-To-Right-Row">
+        <div class="Top-To-Bottom-Column Col-50">
+          <img class="Float-Style"
+              srcset="Assets/Haven/Storyboard-Sprint-2-1080w.png 1080w,
+                    Assets/Haven/Storyboard-Sprint-2-720w.png 720w,
+                    Assets/Haven/Storyboard-Sprint-2-360w.png 360w"
+             sizes="(max-width:600px) 100vw 600px"
+             src="Assets/Haven/Storyboard-Sprint-2-1080w.png"
+             loading="lazy"
+             decoding="async"
+             alt="A busy series of storyboards on a whiteboard shows Haven's main workflows.">
+        </div>
+        <div class="Top-To-Bottom-Column Col-50">
+          <img class="Float-Style"
+              srcset="Assets/Haven/Storyboard-Sprint-3-1080w.png 1080w,
+                    Assets/Haven/Storyboard-Sprint-3-720w.png 720w,
+                    Assets/Haven/Storyboard-Sprint-3-360w.png 360w"
+             sizes="(max-width:600px) 100vw 600px"
+             src="Assets/Haven/Storyboard-Sprint-3-1080w.png"
+             loading="lazy"
+             decoding="async"
+             alt="A busy series of storyboards on a whiteboard shows Haven's main workflows. A design studio is the background.">
+        </div>
+      </div>
+      <div class="Top-To-Bottom-Column Text-Column Col-50">
         <h2>Sprint 2 & 3</h2>
         <p>Over the next two sprints, I oversaw storyboarding while prototyping, and conducted user testing to improve Haven’s main flows.</p>
-      </div>
-      <div class="Top-To-Bottom-Column Col-33">
-        <img class="Float-Style"
-            srcset="Assets/Haven/Storyboard-Sprint-2-1080w.png 1080w,
-                  Assets/Haven/Storyboard-Sprint-2-720w.png 720w,
-                  Assets/Haven/Storyboard-Sprint-2-360w.png 360w"
-           sizes="(max-width:600px) 100vw 600px"
-           src="Assets/Haven/Storyboard-Sprint-2-1080w.png"
-           loading="lazy"
-           decoding="async"
-           alt="A busy series of storyboards on a whiteboard shows Haven's main workflows.">
-      </div>
-      <div class="Top-To-Bottom-Column Col-33">
-        <img class="Float-Style"
-            srcset="Assets/Haven/Storyboard-Sprint-3-1080w.png 1080w,
-                  Assets/Haven/Storyboard-Sprint-3-720w.png 720w,
-                  Assets/Haven/Storyboard-Sprint-3-360w.png 360w"
-           sizes="(max-width:600px) 100vw 600px"
-           src="Assets/Haven/Storyboard-Sprint-3-1080w.png"
-           loading="lazy"
-           decoding="async"
-           alt="A busy series of storyboards on a whiteboard shows Haven's main workflows. A design studio is the background.">
       </div>
     </div>
   </section>
   <section id="Iteration-My-Plan" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-50">
-      <div class="Top-To-Bottom-Column Light-Text Text-Column Col-50">
+    <div class="Top-To-Bottom-Column Light-Text Text-Column Col-Dynamic On-Screen-Target-For-Child-Simple-Ins">
+      <div class= "Simple-In">
         <div class="Paragraph-Title-Stack">
-          <h4>My Plan</h4>
-          <h2>Iteration</h2>
+          <h4>Iteration:</h4>
+          <h2>My Plan</h2>
         </div>
         <p>“As a queer youth, I need a place to review my information, and to track what I still need to plan for.”</p>
       </div>
     </div>
-    <div class="Left-To-Right-Row Col-50 On-Screen-Target-For-Child-Cards">
-      <div class="Preview-Card-Large Col-50 Card-In Animation-Delay-0-0-5">
-        <div class="Preview-Card-Header">
-          <h4>Sprint 1</h4>
-        </div>
-        <div class="Preview-Card-Content">
-          <p>Representing “progress” as a set of pre-determined steps isn’t ethical because coming out isn’t a set path. Felt too close to a generic task-tracking app.</p>
-        </div>
-      </div>
-      <div class="Col-50">
-        <img class="Card-Style Card-In Animation-Delay-0-1-5"
+    <div class="Left-To-Right-Row Col-Dynamic On-Screen-Target-For-Child-Cards">
+      <div class="Col-40">
+        <img class="Card-Style"
             srcset="Assets/Haven/Iteration-My-Plan/My-Plan-1-1080w.png 1080w,
                   Assets/Haven/Iteration-My-Plan/My-Plan-1-720w.png 720w,
                   Assets/Haven/Iteration-My-Plan/My-Plan-1-360w.png 360w,
@@ -397,18 +395,18 @@
            decoding="async"
            alt="A low-fidelity mockup for tracking a goal: Find best location, with multiple subtasks, and a prompt to start the next goal: Pick the optimal timing.">
       </div>
-    </div>
-    <div class="Left-To-Right-Row Col-50 On-Screen-Target-For-Child-Cards">
-      <div class="Preview-Card-Large Col-50 Card-In Animation-Delay-0-0-5">
+      <div class="Preview-Card-Large Col-60 Card-In Animation-Delay-0-0-5">
         <div class="Preview-Card-Header">
-          <h4>Sprint 2</h4>
+          <h4>Sprint 1</h4>
         </div>
         <div class="Preview-Card-Content">
-          <p>While my teamates adapted content from <a href="https://www.thetrevorproject.org/trvr_support_center/coming-out/">The Trevor Project</a>, I stripped out unnecessary task-tracking features.  As a result the plan page was more straightforward but still too linear.</p>
+          <p>Representing “progress” as a set of pre-determined steps isn’t ethical because coming out isn’t a set path. Felt too close to a generic task-tracking app.</p>
         </div>
       </div>
-      <div class="Col-50">
-        <img class="Card-Style Card-In Animation-Delay-0-1-5"
+    </div>
+    <div class="Left-To-Right-Row Col-Dynamic On-Screen-Target-For-Child-Cards">
+      <div class="Col-40">
+        <img class="Card-Style"
             srcset="Assets/Haven/Iteration-My-Plan/My-Plan-2-1080w.png 1080w,
                   Assets/Haven/Iteration-My-Plan/My-Plan-2-720w.png 720w,
                   Assets/Haven/Iteration-My-Plan/My-Plan-2-360w.png 360w,
@@ -419,18 +417,18 @@
            decoding="async"
            alt="A medium fidelity mockup outlines a numbered list of categoties like 'Your peers, authority, shelter,' and 'community'. The layout it spartan and quite boring.">
       </div>
-    </div>
-    <div class="Left-To-Right-Row Col-50 On-Screen-Target-For-Child-Cards">
-      <div class="Preview-Card-Large Col-50 Card-In Animation-Delay-0-0-5">
+      <div class="Preview-Card-Large Col-60 Card-In Animation-Delay-0-0-5">
         <div class="Preview-Card-Header">
-          <h4>Industry Crit Week</h4>
+          <h4>Sprint 2</h4>
         </div>
         <div class="Preview-Card-Content">
-          <p>I prototyped an interactive version that used progressive disclosure to collapse each category ahead of a desk crit. Feedback from designers at SAP was that too much was being hidden, and the design was over-complicated.</p>
+          <p>While my teamates adapted content from <a href="https://www.thetrevorproject.org/trvr_support_center/coming-out/">The Trevor Project</a>, I stripped out unnecessary task-tracking features.  As a result the plan page was more straightforward but still too linear.</p>
         </div>
       </div>
-      <div class="Col-50">
-        <video class="Card-Style Card-In Animation-Delay-0-1-5"
+    </div>
+    <div class="Left-To-Right-Row Col-Dynamic">
+      <div class="Col-40">
+        <video class="Card-Style"
         width="750"
         height="1612"
         data-setup='{"fluid":true}'
@@ -441,18 +439,20 @@
         This browser does not support video, or javascript has been disabled. If updating your browser does not fix this issue, <a href="Index.html/Get-In-Touch">please let me know,</a> as this is likely an issue I caused.
         </video>
       </div>
-    </div>
-    <div class="Left-To-Right-Row Col-50 On-Screen-Target-For-Child-Cards">
-      <div class="Preview-Card-Large Col-50 Card-In Animation-Delay-0-0-5">
-        <div class="Preview-Card-Header">
-          <h4>Final Prototype</h4>
-        </div>
-        <div class="Preview-Card-Content">
-          <p>My objective for the Plan page was to highlight how far users have come, not how much they have left. Minimized headings grow as users engage with content so their information is automatically organized in one place. <br> <br> Headings were rephrased as questions to make content more inviting, and reinforce the need for self evaluation.</p>
+      <div class="On-Screen-Target-For-Child-Cards Col-60">
+        <div class="Preview-Card-Large Card-In Animation-Delay-0-0-5">
+          <div class="Preview-Card-Header">
+            <h4>Industry Crit Week</h4>
+          </div>
+          <div class="Preview-Card-Content">
+            <p>I prototyped an interactive version that used progressive disclosure to collapse each category ahead of a desk crit. Feedback from designers at SAP was that too much was being hidden, and the design was over-complicated.</p>
+          </div>
         </div>
       </div>
-      <div class="Col-50">
-        <video class="Card-Style Card-In Animation-Delay-0-1-5"
+    </div>
+    <div class="Left-To-Right-Row Col-Dynamic">
+      <div class="Col-40">
+        <video class="Card-Style"
         width="674"
         height="1514"
         data-setup='{"fluid":true}'
@@ -463,17 +463,27 @@
         This browser does not support video, or javascript has been disabled. If updating your browser does not fix this issue, <a href="Index.html/Get-In-Touch">please let me know,</a> as this is likely an issue I caused.
         </video>
       </div>
+      <div class="On-Screen-Target-For-Child-Cards Col-60">
+        <div class="Preview-Card-Large Card-In Animation-Delay-0-0-5">
+          <div class="Preview-Card-Header">
+            <h4>Final Prototype</h4>
+          </div>
+          <div class="Preview-Card-Content">
+            <p>My objective for the Plan page was to highlight how far users have come, not how much they have left. Minimized headings grow as users engage with content so their information is automatically organized in one place. <br> <br> Headings were rephrased as questions to make content more inviting, and reinforce the need for self evaluation.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section id="Prototyping" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-75 On-Screen-Target-For-Child-Cards">
+    <div class="Left-To-Right-Row Col-Dynamic">
       <div class="Top-To-Bottom-Column Col-50">
         <div class="Top-To-Bottom-Column Text-Column">
           <h2>Prototyping</h2>
           <p>While visual design was defined in figma, I imported the UI into Invision studio because it offered more control* over complex interactions and motion design.</p>
         </div>
-        <div class="Left-To-Right-Row Col-50">
-          <div class="Col-50">
+        <div class="Left-To-Right-Row">
+          <div class="Col-25">
             <img class="Float-Style"
                sizes="(max-width:600px) 100vw 600px"
                src="Assets/Haven/Figma-Logo.png"
@@ -481,7 +491,7 @@
                decoding="async"
                alt="The Figma app icon.">
            </div>
-           <div class="Col-50">
+           <div class="Col-25">
              <img class="Float-Style"
                 sizes="(max-width:600px) 100vw 600px"
                 src="Assets/Haven/Invision-Logo.svg"
@@ -492,7 +502,7 @@
         </div>
         <p>*In 2019. Figma offers comparable benefits now.</p>
       </div>
-      <div class="Col-50">
+      <div class="Col-50 On-Screen-Target-For-Child-Cards">
         <img class="Card-Style Card-In Animation-Delay-0-1-5"
             id="Prototyping-Inverse-Shadow-Card"
             srcset="Assets/Haven/Invision-Prototyping-1920w.png 1920w,
@@ -508,7 +518,7 @@
     </div>
   </section>
   <section id="Content-Engagement-Testing" Class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row On-Screen-Target-For-Child-Cards Col-75">
+    <div class="Left-To-Right-Row Col-Dynamic">
       <div class="Top-To-Bottom-Column Text-Column Light-Text Col-33">
         <div class="Paragraph-Title-Stack">
           <h4>Content</h4>
@@ -517,7 +527,7 @@
         <p>I was alarmed by early tests because users weren't engaging with the prompts, leading to no self-reflection. Over sprint 2 and 3 I investigated the problem and tested several solutions. “Blank canvas paralysis” created initial resistance, so I reduced the large text area to a simple field and added optional suggestions. After seeing only small improvements, I hypothesized that visualizing responses as messages could prime users to think conversationally. This was by far the most succesful improvement and doubled engagement.</p>
       </div>
       <div class="Left-To-Right-Row Col-66">
-        <div class="Top-To-Bottom-Column-Centered Light-Text">
+        <div class="Top-To-Bottom-Column-Centered Light-Text On-Screen-Target-For-Child-Cards">
           <div class="Top-To-Bottom-Column-Centered Paragraph-Title-Stack">
             <h2>&lt;1</h2>
             <h4>Responses, V1</h4>
@@ -533,7 +543,7 @@
              decoding="async"
              alt="A UI mockup that asks users 'What are some topics or questions I could bring up to a potential confidant' and supplies a large text area with 'your questions' as placeholder text.">
         </div>
-        <div class="Top-To-Bottom-Column-Centered Light-Text">
+        <div class="Top-To-Bottom-Column-Centered Light-Text On-Screen-Target-For-Child-Cards">
           <div class="Top-To-Bottom-Column-Centered Paragraph-Title-Stack">
             <h2>1-2</h2>
             <h4>responses, V2</h4>
@@ -549,7 +559,7 @@
              decoding="async"
              alt="A UI mockup that asks users a question, and provides a small text field to reply, but also includes a 'need a suggestion?' feature and some advice like 'don't make it too obvious' and 'don't make it about yourself">
         </div>
-        <div class="Top-To-Bottom-Column-Centered Light-Text">
+        <div class="Top-To-Bottom-Column-Centered Light-Text On-Screen-Target-For-Child-Cards">
           <div class="Top-To-Bottom-Column-Centered Paragraph-Title-Stack">
             <h2>3-5</h2>
             <h4>responses, V3</h4>
@@ -567,9 +577,9 @@
         </div>
       </div>
     </div>
-    <div class="Left-To-Right-Row Col-40 Light-Text On-Screen-Target-For-Child-Cards">
+    <div class="Left-To-Right-Row Col-Dynamic Light-Text On-Screen-Target-For-Child-Cards">
       <div class="Top-To-Bottom-Column Col-50">
-        <h2>Final Interaction</h2>
+        <h2>Final Version</h2>
       </div>
       <div class="Top-To-Bottom-Column Col-50">
         <video class="Card-Style Card-In Animation-Delay-0-0"
@@ -586,12 +596,12 @@
     </div>
   </section>
   <section id="Motion-Design" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-40 On-Screen-Target-For-Child-Simple-Ins">
-      <div class="Top-To-Bottom-Column Text-Column Col-50 Simple-In Animation-Delay-0-0">
+    <div class="Left-To-Right-Row Col-Dynamic On-Screen-Target-For-Child-Simple-Ins">
+      <div class="Top-To-Bottom-Column Text-Column Col-60 Simple-In Animation-Delay-0-0">
         <h2>Motion design</h2>
         <p>Testers struggled to recall where their information was being saved. Realizing this was a continuity issue, I drew focus to the relevant icon while user info was being saved. This change, while small, improved navigation accuracy by nearly +45% when testers were asked to find their saved responses.</p>
       </div>
-      <div class="Top-To-Bottom-Column Col-50">
+      <div class="Top-To-Bottom-Column Col-40">
         <figure class="Simple-In Animation-Delay-0-1-5">
           <video
             width="840"
@@ -603,19 +613,19 @@
               <source src="Assets/Haven/Motion-Design.mp4" type='video/mp4'>
           This browser does not support video, or javascript has been disabled. If updating your browser does not fix this issue, <a href="Index.html/Get-In-Touch">please let me know,</a> as this is likely an issue I caused.
           </video>
-          <figcaption>&#8627; Icon animation improved navigation by +45%</figcaption>
+          <figcaption>Animation improved navigation by +45%</figcaption>
         </figure>
       </div>
     </div>
   </section>
   <section id="Final-Interface" class="Top-To-Bottom-Column-Centered">
-    <div class="Top-To-Bottom-Column Col-60">
+    <div class="Top-To-Bottom-Column Col-Dynamic">
       <h2>App walkthrough</h2>
       <div class="Iframe-Container">
         <iframe src="https://player.vimeo.com/video/390239255?h=bd9e9e0eff&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="fullscreen;" allowfullscreen title="Haven"></iframe>
       </div>
     </div>
-    <div class="Left-To-Right-Row Col-66">
+    <div class="Left-To-Right-Row Col-Dynamic">
       <div class="Top-To-Bottom-Column">
         <video
           width="720"
@@ -635,8 +645,8 @@
     </div>
   </section>
   <section id="Reflective-Content" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-50">
-      <div class="Top-To-Bottom-Column Col-50">
+    <div class="Left-To-Right-Row Col-Dynamic">
+      <div class="Top-To-Bottom-Column Col-40">
         <video
           width="840"
           height="1672"
@@ -648,19 +658,19 @@
         This browser does not support video, or javascript has been disabled. If updating your browser does not fix this issue, <a href="Index.html/Get-In-Touch">please let me know,</a> as this is likely an issue I caused.
         </video>
       </div>
-      <div class="Top-To-Bottom-Column Text-Column Col-50">
+      <div class="Top-To-Bottom-Column Text-Column Col-60">
         <h2>Reflective content</h2>
         <p>Haven’s goal is to <b>pose questions, to provide some answers, and to build trust with youth </b> by preparing them to make their own decisions. Videos, activities, and extra resources create a multi-modal scaffold for learning. I payed keen attention to details, like ensuring <b>videos are muted by default, and opened links circumvent search history</b> by using an in-app browser.</p>
       </div>
     </div>
   </section>
   <section id="Plan-Growth" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-75">
-      <div class="Top-To-Bottom-Column Text-Column">
-        <h2>A plan that grows with you</h2>
+    <div class="Left-To-Right-Row Col-Dynamic">
+      <div class="Top-To-Bottom-Column Text-Column Col-40">
+        <h2>Scaling user plans</h2>
         <p>Completing activites in any order automatically organizes critical information in a single place.</p>
       </div>
-      <div class="Left-To-Right-Row">
+      <div class="Left-To-Right-Row Col-60">
         <div class="Top-To-Bottom-Column Col-50">
           <figure>
             <video
@@ -695,12 +705,12 @@
     </div>
   </section>
   <section id="Privacy" class="Top-To-Bottom-Column-Centered">
-    <div class="Left-To-Right-Row Col-50">
-      <div class="Top-To-Bottom-Column Text-Column">
+    <div class="Left-To-Right-Row Col-Dynamic">
+      <div class="Top-To-Bottom-Column Text-Column Col-60">
         <h2>Privacy</h2>
-        <p>Above all else, user safety was my first priority. The interaction I’m proudest of designing is Haven’s ability to conceal itself, preserving the user’s digital privacy in case someone goes snooping. </p>
+        <p>User safety is always my first priority. The interaction I’m proudest of designing is Haven’s ability to conceal itself in case someone comes snooping. </p>
       </div>
-      <div class="Top-To-Bottom-Column">
+      <div class="Top-To-Bottom-Column Col-40">
         <video class="Float-Style"
           width="742"
           height="1960"
@@ -715,8 +725,8 @@
     </div>
   </section>
   <section id="Next-Steps" class="Top-To-Bottom-Column-Centered">
-    <div class="Top-To-Bottom-Column Col-33">
-      <img class="Float-Style"
+    <div class="Top-To-Bottom-Column-Centered Col-Dynamic">
+      <img class="Float-Style Col-60"
           srcset="Assets/Haven/Next-Steps-1080w.png 1080w,
                 Assets/Haven/Next-Steps-720w.png 720w,
                 Assets/Haven/Next-Steps-360w.png 360w,
@@ -726,18 +736,18 @@
          loading="lazy"
          decoding="async"
          alt="An illustrated person looks curiously at a set of footprints laying ahead of them.">
-      <div class="Text-Column">
+      <div class="Text-Column Col-100">
         <h2>Next steps</h2>
-        <p>Haven has a very strong visual identity, but was created before I had a deep understanding of accessibility criteria or design systems. If this app were to be fully developed, my first priotity would be to redesign the UI by <b>removing low-contrast text and creating a design system </b> that works within platform conventions. </p>
+        <p>Haven has a strong visual identity, but was created before I had an understanding of using design systems or accessibility criteria. If this app were to be fully developed, my first priotity would be to redesign the UI by <b>removing low-contrast text and creating a unified design system. </b></p>
       </div>
     </div>
   </section>
   <section id="Learning" class="Top-To-Bottom-Column-Centered">
-    <div class="Top-To-Bottom-Column Text-Column Col-40">
+    <div class="Top-To-Bottom-Column Text-Column Col-Dynamic">
       <h2>Learning</h2>
       <p>Over the course of this project, I picked up new tools like persona spectrums and mental model diagrams. I challenged myself to lead a design team by organizing sprints, and I gained a new understanding of how powerful design is when projects represent the values and idenities of their team. <br> <br>I’d like to thank my wonderful team of friends for sharing their experience and energy. I am a better designer, ally, and human because of you.</p>
     </div>
-    <div class="Top-To-Bottom-Column Col-75">
+    <div class="Top-To-Bottom-Column Col-Dynamic">
       <figure class="Col-100">
         <img class="Float-Style"
             srcset="Assets/Haven/The-Team-1080w.png 1920w,

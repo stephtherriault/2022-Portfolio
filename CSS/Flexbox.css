@@ -42,6 +42,12 @@
     padding:4px 22px 0px; /* reduces nav padding. Default is 22px 44px 22px*/
     height: 62px; /* reduces nav height to account for padding. Default is 96px*/
   }
+  .Nav-Links{
+    gap:12px;
+  }
+  nav .Subtle-Link{
+    margin: -4px 0px;
+  }
   .Content-Clipper{
     clip-path: none; /* reduces size of inset to match new margins*/
     margin-top: 0px; /* reduces top margin size to account for new nav height*/
