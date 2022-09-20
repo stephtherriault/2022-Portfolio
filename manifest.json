@@ -4,6 +4,8 @@
     "icons": [{
         "src": "Assets/Google-Touch-Icon.png",
         "sizes": "512x512"
+        "type": "image/png",
+        "purpose": "maskable"
     }],
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
