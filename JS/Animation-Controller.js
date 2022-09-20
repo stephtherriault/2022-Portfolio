@@ -66,6 +66,7 @@ hoverableItems.forEach(item => {
   }, false);
 });
 
+/* code disabled for now, unsure of why it's not working.
 
 const callbackMedia = (entries) => {
   entries.forEach(
@@ -80,7 +81,6 @@ const callbackMedia = (entries) => {
   );
 }
 
-/* code disabled for now, unsure of why it's not working.
 let onScreenMediaObserver = new IntersectionObserver(callbackMedia, {threshold:0.7});
 
 const mediaItems = document.images;
