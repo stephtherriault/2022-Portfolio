@@ -76,9 +76,14 @@ h2{
   }
 }
 @media screen and (max-width: 830px){
+  #About{
+    min-height: none; /* removes max height for taller single column*/
+  }
   #About .Col-Dynamic{
     flex-direction: column; /*Reflows image and text to flow vertically for space*/
     width: calc(744px / 2); /* 744px is smallest acceptable width, halved because it's a column now*/
+    margin-top: 25vh; /* Sets initial */
+    margin-bottom: 20vh; /* Sets initial */
   }
   #About .Col-50{
     width:100% /* Sets child columns at full width because parent is a column now */
@@ -96,7 +101,9 @@ h2{
   #About .Col-Dynamic .Left-To-Right-Row{  /* Grabs left to right row of links */
     flex-direction: column; /* Flows links vertically */
     align-items: flex-start; /* Left-algns links. Default is center */
-    gap: 2px; /* lessens gap. Default is 32px */
+    gap: 8px; /* lessens gap. Default is 32px */
+    width: 100%;
+    align-items: center;
   }
 }
 
