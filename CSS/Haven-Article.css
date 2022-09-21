@@ -5,6 +5,9 @@ h2{
   text-decoration: underline #FECA06 solid 3px;
   text-decoration-skip-ink: none;
 }
+body{
+  overflow-x: hidden; /* I'm not sure why, but just this page was scrolling on the x reason for seemingly no reason. This solved it.*/
+}
 .Light-Text h2{
   text-decoration: none;
 }
