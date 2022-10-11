@@ -17,3 +17,80 @@
     max-width: 430px;
     gap:18px;
 }
+
+#Archive-Chronological{
+  padding: calc(10vh + 96px) 44px 45vh 44px;
+}
+#Archive-Chronological .Left-To-Right-Row{
+  align-items: start;
+}
+#Archive-Chronological .Col-Dynamic{
+  width:50%;
+}
+#Archive-Chronological .Col-Dynamic:nth-child(2){
+  gap:12px;
+}
+
+ul,ol{
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 4px;
+}
+h3{
+  width:fit-content;
+  color: #0036B1;
+  border-bottom: 1px solid #0036B1;
+}
+a.Link-Unavailable{
+  color: #555555;
+  pointer-events: none;
+  /* prevents text highlighting of disabled buttons*/
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media screen and (min-width: 1016px){ /* anything ABOVE 1016px */
+  #Archive-Chronological .Col-75{
+    max-width:865px;
+  }
+}
+@media screen and (max-width: 1015px){ /* anything under 1015px */
+  #Archive-Chronological .Col-75{
+    width:100%;
+  }
+}
+@media screen and (max-width: 780px){
+  #Archive-Chronological .Col-75{
+    flex-direction: column-reverse;
+    width: 60%;
+  }
+    #Archive-Chronological .Col-Dynamic{
+      width:100%;
+    }
+}
+@media screen and (max-width: 640px){
+  #Archive-Chronological .Col-75{
+    width: 75%;
+  }
+}
+@media screen and (max-width: 530px){
+  #Archive-Chronological .Col-75{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px){
+  #Archive-Chronological {
+    padding: calc(10vh + 62px) 22px 45vh 22px;
+  }
+}
+@media screen and (max-width: 375px){
+  #Archive-Chronological li{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    line-height: 18px;
+  }
+}
